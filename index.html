@@ -3,326 +3,293 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AERA — Your Creative Era Starts Here</title>
-  <meta name="description" content="AERA — The all-in-one creative platform for independent artists. DAW, beats, lyrics, storage, community. Enter your era.">
-  <meta property="og:title" content="AERA — Your Creative Era Starts Here">
-  <meta property="og:description" content="The all-in-one creative platform for independent artists. Enter your era.">
+  <title>AERA LABS — Enter Your Era</title>
+  <meta name="description" content="AERA LABS — The creative platform for independent artists. Professional DAW, beats, AI lyrics, cloud vault, XP progression. Enter your era.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
 
   <style>
     /* ============================================
-       AERA — Glassmorphic Design System
-       Purple · Gold · White · Grey · Black
+       AERA LABS — Deep Luxury Design System
+       Deep Purple · Rich Gold · Pure Black · Clean White
        ============================================ */
     :root {
-      --bg-void: #06060a;
-      --bg-primary: #09090f;
-      --bg-secondary: #0d0d15;
-      --bg-tertiary: #111119;
+      /* Blacks — ultra deep */
+      --black-void: #020204;
+      --black-deep: #050508;
+      --black-primary: #07070b;
+      --black-card: #0a0a10;
+      --black-elevated: #0d0d14;
+      --black-surface: #101018;
+
+      /* Deep Purple */
+      --purple-900: #2e1065;
+      --purple-800: #3b0f82;
+      --purple-700: #4c1d95;
+      --purple-600: #5b21b6;
+      --purple-500: #6d28d9;
+      --purple-400: #7c3aed;
+      --purple-300: #8b5cf6;
+      --purple-200: #a78bfa;
+      --purple-100: #c4b5fd;
+      --purple-glow: rgba(91, 33, 182, 0.15);
+      --purple-dim: rgba(91, 33, 182, 0.25);
+      --purple-subtle: rgba(91, 33, 182, 0.06);
+      --purple-border: rgba(91, 33, 182, 0.2);
+      --purple-border-hover: rgba(124, 58, 237, 0.35);
+
+      /* Rich Gold */
+      --gold-900: #78350f;
+      --gold-700: #a16207;
+      --gold-500: #ca8a04;
+      --gold-400: #d4a017;
+      --gold-300: #eab308;
+      --gold-200: #facc15;
+      --gold-100: #fef08a;
+      --gold-glow: rgba(202, 138, 4, 0.1);
+      --gold-dim: rgba(202, 138, 4, 0.2);
+      --gold-subtle: rgba(202, 138, 4, 0.05);
+      --gold-border: rgba(202, 138, 4, 0.15);
 
       /* Glass */
-      --glass-bg: rgba(14, 14, 24, 0.55);
-      --glass-bg-light: rgba(20, 20, 35, 0.45);
-      --glass-bg-heavy: rgba(10, 10, 18, 0.75);
-      --glass-border: rgba(255, 255, 255, 0.07);
-      --glass-border-hover: rgba(255, 255, 255, 0.12);
-      --glass-shine: rgba(255, 255, 255, 0.03);
-      --glass-blur: 24px;
-
-      /* Purple */
-      --purple-50: #faf5ff;
-      --purple-100: #f3e8ff;
-      --purple-200: #e9d5ff;
-      --purple-300: #c084fc;
-      --purple-400: #a855f7;
-      --purple-500: #8b5cf6;
-      --purple-600: #7c3aed;
-      --purple-700: #6d28d9;
-      --purple-dim: rgba(139, 92, 246, 0.2);
-      --purple-glow: rgba(139, 92, 246, 0.12);
-      --purple-subtle: rgba(139, 92, 246, 0.06);
-      --purple-border: rgba(139, 92, 246, 0.2);
-
-      /* Gold */
-      --gold: #d4a020;
-      --gold-light: #f0c850;
-      --gold-dim: rgba(212, 160, 32, 0.2);
-      --gold-glow: rgba(212, 160, 32, 0.1);
-      --gold-subtle: rgba(212, 160, 32, 0.05);
-      --gold-border: rgba(212, 160, 32, 0.18);
-
-      /* Accents */
-      --green: #22c55e;
-      --green-dim: rgba(34, 197, 94, 0.15);
-      --orange: #f59e0b;
-      --cyan: #06b6d4;
-      --pink: #ec4899;
-      --red: #ef4444;
+      --glass: rgba(10, 10, 18, 0.5);
+      --glass-heavy: rgba(7, 7, 12, 0.7);
+      --glass-light: rgba(14, 14, 24, 0.4);
+      --glass-border: rgba(255, 255, 255, 0.04);
+      --glass-border-hover: rgba(255, 255, 255, 0.08);
+      --glass-shine: rgba(255, 255, 255, 0.02);
+      --glass-shine-hover: rgba(255, 255, 255, 0.04);
 
       /* Text */
-      --text-white: #f4f4f6;
-      --text-primary: #e0e0e8;
-      --text-secondary: #9090a8;
-      --text-dim: #5a5a72;
-      --text-ghost: #303048;
+      --white: #f8f8fa;
+      --text-primary: #dcdce4;
+      --text-secondary: #8888a0;
+      --text-dim: #4e4e68;
+      --text-ghost: #2a2a40;
 
-      /* Borders */
-      --border-subtle: rgba(255, 255, 255, 0.04);
-      --border-light: rgba(255, 255, 255, 0.07);
-      --border-medium: rgba(255, 255, 255, 0.1);
+      /* Utility */
+      --green: #16a34a;
+      --green-dim: rgba(22, 163, 74, 0.12);
+      --orange: #ea580c;
+      --cyan: #0891b2;
+      --pink: #db2777;
+      --red: #dc2626;
+
+      /* Border */
+      --border-1: rgba(255,255,255,0.03);
+      --border-2: rgba(255,255,255,0.05);
+      --border-3: rgba(255,255,255,0.08);
 
       /* Layout */
-      --section-padding: 120px;
-      --container: 1160px;
-      --radius-sm: 10px;
-      --radius-md: 14px;
-      --radius-lg: 18px;
-      --radius-xl: 24px;
-      --radius-full: 100px;
+      --max-w: 1120px;
+      --section-y: 128px;
+      --r-sm: 10px;
+      --r-md: 14px;
+      --r-lg: 18px;
+      --r-xl: 22px;
+      --r-2xl: 28px;
+      --r-full: 100px;
 
-      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg-primary);
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--black-deep);
       color: var(--text-primary);
       line-height: 1.6;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; text-decoration: none; }
-    button { font-family: inherit; border: none; cursor: pointer; }
-    img { max-width: 100%; display: block; }
+    button { font-family: inherit; border: none; cursor: pointer; background: none; }
 
-    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
-    /* ---- Glassmorphic Utility ---- */
-    .glass {
-      background: var(--glass-bg);
-      backdrop-filter: blur(var(--glass-blur)) saturate(1.4);
-      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(1.4);
-      border: 1px solid var(--glass-border);
-      box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.25),
-        inset 0 1px 0 var(--glass-shine);
-    }
-
-    .glass-light {
-      background: var(--glass-bg-light);
-      backdrop-filter: blur(20px) saturate(1.3);
-      -webkit-backdrop-filter: blur(20px) saturate(1.3);
-      border: 1px solid var(--glass-border);
-      box-shadow: inset 0 1px 0 var(--glass-shine);
-    }
-
-    /* ---- Section Labels ---- */
-    .section-label {
+    /* ---- Shared ---- */
+    .label {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 3px;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
+    .label.purple { color: var(--purple-300); }
+    .label.gold { color: var(--gold-400); }
+    .label::before { content: '◆'; font-size: 7px; }
 
-    .section-label.purple { color: var(--purple-400); }
-    .section-label.gold { color: var(--gold); }
-
-    .section-label::before {
-      content: '';
-      width: 20px;
-      height: 1.5px;
-    }
-    .section-label.purple::before { background: linear-gradient(90deg, var(--purple-400), transparent); }
-    .section-label.gold::before { background: linear-gradient(90deg, var(--gold), transparent); }
-
-    .section-title {
+    .heading {
       font-family: 'Outfit', sans-serif;
-      font-size: clamp(32px, 5vw, 52px);
+      font-size: clamp(30px, 4.5vw, 50px);
       font-weight: 800;
-      line-height: 1.08;
+      line-height: 1.06;
       letter-spacing: -1.5px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+      color: var(--white);
     }
 
-    .section-desc {
-      font-size: 16px;
+    .subtext {
+      font-size: 15px;
       color: var(--text-secondary);
-      max-width: 520px;
-      line-height: 1.75;
+      max-width: 480px;
+      line-height: 1.8;
     }
 
-    .purple-text {
-      background: linear-gradient(135deg, var(--purple-300), var(--purple-500), var(--purple-300));
+    .purple-grad {
+      background: linear-gradient(135deg, var(--purple-200), var(--purple-500));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .gold-text {
-      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-light));
+    .gold-grad {
+      background: linear-gradient(135deg, var(--gold-200), var(--gold-500));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .duo-text {
-      background: linear-gradient(135deg, var(--purple-300), var(--gold-light), var(--purple-400));
+    .duo-grad {
+      background: linear-gradient(135deg, var(--purple-200), var(--gold-300), var(--purple-300));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     /* ============================================
-       NAVIGATION
+       NAVIGATION — Floating pill
        ============================================ */
     nav {
       position: fixed;
-      top: 12px; left: 50%;
-      transform: translateX(-50%);
+      top: 14px; left: 50%; transform: translateX(-50%);
       z-index: 1000;
-      width: calc(100% - 32px);
-      max-width: 900px;
-      transition: all 0.4s var(--ease-out);
+      width: calc(100% - 28px);
+      max-width: 860px;
     }
 
-    .nav-bar {
+    .nav-pill {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 56px;
-      padding: 0 8px 0 20px;
-      background: rgba(12, 12, 20, 0.6);
-      backdrop-filter: blur(24px) saturate(1.5);
-      -webkit-backdrop-filter: blur(24px) saturate(1.5);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: var(--radius-full);
-      box-shadow:
-        0 4px 24px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      height: 52px;
+      padding: 0 6px 0 18px;
+      background: rgba(7, 7, 12, 0.55);
+      backdrop-filter: blur(28px) saturate(1.6);
+      -webkit-backdrop-filter: blur(28px) saturate(1.6);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-full);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: all 0.4s var(--ease);
     }
 
-    nav.scrolled .nav-bar {
-      background: rgba(10, 10, 16, 0.85);
-      border-color: rgba(139, 92, 246, 0.1);
-      box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        0 0 40px var(--purple-glow);
+    nav.scrolled .nav-pill {
+      background: rgba(5, 5, 8, 0.88);
+      border-color: var(--purple-border);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 48px var(--purple-glow);
     }
 
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .nav-brand { display: flex; align-items: center; gap: 8px; }
+
+    .nav-mark {
+      width: 26px; height: 26px;
+      background: linear-gradient(135deg, var(--purple-600), var(--purple-500));
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px var(--purple-dim), inset 0 1px 0 rgba(255,255,255,0.12);
+      transition: transform 0.3s var(--spring);
     }
 
-    .nav-logo-icon {
-      width: 28px; height: 28px;
-      background: linear-gradient(135deg, var(--purple-500), var(--purple-400));
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      color: white;
-      font-weight: 900;
+    .nav-mark svg { width: 12px; height: 12px; }
+
+    .nav-brand:hover .nav-mark { transform: rotate(-4deg) scale(1.06); }
+
+    .nav-wordmark {
       font-family: 'Outfit', sans-serif;
-      box-shadow: 0 2px 8px var(--purple-dim);
-      transition: transform 0.3s var(--ease-spring);
-    }
-
-    .nav-logo:hover .nav-logo-icon { transform: rotate(-5deg) scale(1.05); }
-
-    .nav-logo-name {
-      font-family: 'Outfit', sans-serif;
-      font-size: 16px;
       font-weight: 800;
-      letter-spacing: 4px;
-      color: var(--text-white);
+      font-size: 14px;
+      letter-spacing: 3.5px;
+      color: var(--white);
     }
 
-    .nav-center {
+    .nav-wordmark span {
+      font-weight: 500;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--text-dim);
+      margin-left: 4px;
+    }
+
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 2px;
       list-style: none;
     }
 
-    .nav-center a {
-      font-size: 12px;
+    .nav-links a {
+      font-size: 11px;
       font-weight: 500;
-      color: var(--text-secondary);
-      padding: 6px 14px;
-      border-radius: var(--radius-full);
+      color: var(--text-dim);
+      padding: 5px 12px;
+      border-radius: var(--r-full);
       transition: all 0.2s;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.3px;
     }
 
-    .nav-center a:hover {
-      color: var(--text-white);
-      background: rgba(255, 255, 255, 0.05);
-    }
+    .nav-links a:hover { color: var(--text-primary); background: rgba(255,255,255,0.04); }
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+    .nav-actions { display: flex; align-items: center; gap: 6px; }
 
-    .nav-sign-in {
-      font-size: 12px;
+    .nav-login {
+      font-size: 11px;
       font-weight: 500;
-      color: var(--text-secondary);
-      padding: 6px 14px;
+      color: var(--text-dim);
+      padding: 5px 12px;
       transition: color 0.2s;
     }
 
-    .nav-sign-in:hover { color: var(--text-white); }
+    .nav-login:hover { color: var(--text-primary); }
 
-    .nav-cta-btn {
-      padding: 8px 20px;
-      background: linear-gradient(135deg, var(--purple-500), var(--purple-600));
+    .nav-start {
+      padding: 7px 18px;
+      background: linear-gradient(135deg, var(--purple-600), var(--purple-500));
       color: white;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      border-radius: var(--radius-full);
+      border-radius: var(--r-full);
       letter-spacing: 0.3px;
-      transition: all 0.25s var(--ease-out);
-      box-shadow: 0 2px 12px var(--purple-dim);
+      transition: all 0.25s var(--ease);
+      box-shadow: 0 2px 10px var(--purple-dim);
     }
 
-    .nav-cta-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(139, 92, 246, 0.35);
-    }
+    .nav-start:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(91,33,182,0.35); }
 
-    .mobile-toggle {
+    .mobile-btn {
       display: none;
-      background: none;
-      padding: 8px;
+      padding: 6px;
     }
 
-    .mobile-toggle span {
+    .mobile-btn span {
       display: block;
-      width: 18px; height: 1.5px;
-      background: var(--text-primary);
-      border-radius: 2px;
-      margin: 4px 0;
-      transition: all 0.3s var(--ease-out);
+      width: 16px; height: 1.5px;
+      background: var(--text-secondary);
+      border-radius: 1px;
+      margin: 3px 0;
+      transition: all 0.3s var(--ease);
     }
 
-    .mobile-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
-    .mobile-toggle.open span:nth-child(2) { opacity: 0; }
-    .mobile-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+    .mobile-btn.open span:nth-child(1) { transform: rotate(45deg) translate(3px, 3px); }
+    .mobile-btn.open span:nth-child(2) { opacity: 0; }
+    .mobile-btn.open span:nth-child(3) { transform: rotate(-45deg) translate(3px, -3px); }
 
     /* ============================================
        HERO
@@ -337,125 +304,67 @@
       overflow: hidden;
     }
 
-    /* Background layers */
     .hero-bg { position: absolute; inset: 0; z-index: 0; }
 
     .hero-mesh {
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse 50% 40% at 30% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 100%),
-        radial-gradient(ellipse 40% 50% at 70% 60%, rgba(212, 160, 32, 0.05) 0%, transparent 100%),
-        radial-gradient(ellipse 60% 40% at 50% 80%, rgba(139, 92, 246, 0.04) 0%, transparent 100%);
+        radial-gradient(ellipse 45% 35% at 35% 25%, rgba(91, 33, 182, 0.1) 0%, transparent 100%),
+        radial-gradient(ellipse 35% 45% at 65% 65%, rgba(202, 138, 4, 0.04) 0%, transparent 100%),
+        radial-gradient(ellipse 50% 35% at 50% 85%, rgba(91, 33, 182, 0.05) 0%, transparent 100%);
     }
 
     .hero-grid {
       position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
-      background-size: 64px 64px;
-      mask-image: radial-gradient(ellipse 60% 50% at 50% 45%, black 20%, transparent 70%);
-      -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 45%, black 20%, transparent 70%);
+        linear-gradient(rgba(91, 33, 182, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(91, 33, 182, 0.025) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(ellipse 55% 45% at 50% 40%, black 15%, transparent 65%);
+      -webkit-mask-image: radial-gradient(ellipse 55% 45% at 50% 40%, black 15%, transparent 65%);
     }
 
-    .hero-glow-1 {
+    .hero-glow {
       position: absolute;
-      width: 600px; height: 600px;
-      top: -15%; left: 50%;
-      transform: translateX(-50%);
-      background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 60%);
       border-radius: 50%;
-      filter: blur(60px);
-      animation: glowPulse 8s ease-in-out infinite;
+      filter: blur(70px);
+      pointer-events: none;
     }
 
-    .hero-glow-2 {
-      position: absolute;
-      width: 400px; height: 400px;
-      bottom: 5%; right: 10%;
-      background: radial-gradient(circle, rgba(212, 160, 32, 0.06) 0%, transparent 60%);
-      border-radius: 50%;
-      filter: blur(60px);
-      animation: glowPulse 10s ease-in-out infinite reverse;
+    .hero-glow.a {
+      width: 550px; height: 550px;
+      top: -12%; left: 50%; transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(91, 33, 182, 0.14) 0%, transparent 60%);
+      animation: glowPulse 9s ease-in-out infinite;
     }
 
-    .hero-glow-3 {
-      position: absolute;
-      width: 300px; height: 300px;
-      bottom: 20%; left: 5%;
-      background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 60%);
-      border-radius: 50%;
-      filter: blur(50px);
-      animation: glowPulse 12s ease-in-out infinite;
+    .hero-glow.b {
+      width: 350px; height: 350px;
+      bottom: 8%; right: 8%;
+      background: radial-gradient(circle, rgba(202, 138, 4, 0.06) 0%, transparent 60%);
+      animation: glowPulse 12s ease-in-out infinite reverse;
     }
 
-    /* Floating glass elements */
-    .hero-float {
-      position: absolute;
-      border-radius: var(--radius-lg);
-      background: rgba(139, 92, 246, 0.04);
-      border: 1px solid rgba(139, 92, 246, 0.08);
-      backdrop-filter: blur(8px);
-      animation: floatSlow 15s ease-in-out infinite;
-      z-index: 1;
-    }
+    .hero-content { position: relative; z-index: 5; text-align: center; max-width: 720px; }
 
-    .hero-float-1 {
-      width: 120px; height: 120px;
-      top: 15%; left: 8%;
-      border-radius: 50%;
-      animation-delay: 0s;
-    }
-
-    .hero-float-2 {
-      width: 80px; height: 80px;
-      top: 25%; right: 12%;
-      border-radius: var(--radius-md);
-      animation-delay: -5s;
-      background: rgba(212, 160, 32, 0.03);
-      border-color: rgba(212, 160, 32, 0.06);
-    }
-
-    .hero-float-3 {
-      width: 60px; height: 60px;
-      bottom: 25%; left: 15%;
-      animation-delay: -10s;
-    }
-
-    .hero-float-4 {
-      width: 100px; height: 100px;
-      bottom: 15%; right: 8%;
-      border-radius: 50%;
-      animation-delay: -3s;
-      background: rgba(212, 160, 32, 0.03);
-      border-color: rgba(212, 160, 32, 0.06);
-    }
-
-    /* Content */
-    .hero-content {
-      position: relative;
-      z-index: 5;
-      text-align: center;
-      max-width: 800px;
-    }
-
-    .hero-badge {
+    .hero-chip {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 7px 18px;
-      background: rgba(139, 92, 246, 0.06);
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(91, 33, 182, 0.06);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(139, 92, 246, 0.12);
-      border-radius: var(--radius-full);
-      font-size: 10px;
-      font-weight: 700;
+      border: 1px solid rgba(91, 33, 182, 0.1);
+      border-radius: var(--r-full);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 600;
       letter-spacing: 2px;
-      color: var(--purple-300);
-      margin-bottom: 32px;
+      color: var(--purple-200);
+      margin-bottom: 28px;
     }
 
-    .hero-badge-dot {
+    .hero-chip-dot {
       width: 5px; height: 5px;
       background: var(--purple-400);
       border-radius: 50%;
@@ -463,1549 +372,1082 @@
       box-shadow: 0 0 6px var(--purple-dim);
     }
 
-    .hero-badge span:last-child { color: var(--gold-light); }
-
-    .hero-title {
+    .hero-h1 {
       font-family: 'Outfit', sans-serif;
-      font-size: clamp(56px, 11vw, 130px);
+      font-size: clamp(52px, 10vw, 120px);
       font-weight: 900;
-      line-height: 0.92;
-      letter-spacing: -4px;
-      margin-bottom: 6px;
+      line-height: 0.9;
+      letter-spacing: -3px;
+      margin-bottom: 4px;
     }
 
-    .hero-title-main {
+    .hero-h1-text {
       display: block;
-      background: linear-gradient(135deg, var(--text-white) 0%, var(--purple-200) 30%, var(--gold-light) 60%, var(--text-white) 100%);
+      background: linear-gradient(135deg, var(--white) 0%, var(--purple-100) 25%, var(--gold-200) 55%, var(--white) 100%);
+      background-size: 250% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      background-size: 200% auto;
-      animation: shimmerText 6s linear infinite;
+      animation: shimmer 7s linear infinite;
     }
 
-    .hero-sub-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(20px, 3vw, 32px);
-      font-weight: 300;
-      color: var(--text-secondary);
+    .hero-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(11px, 1.5vw, 14px);
+      font-weight: 500;
       letter-spacing: 8px;
       text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    .hero-desc {
-      font-size: 16px;
       color: var(--text-dim);
-      margin-bottom: 40px;
-      line-height: 1.8;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-bottom: 28px;
     }
 
-    .hero-desc strong {
+    .hero-typed {
+      font-size: clamp(16px, 2vw, 20px);
       color: var(--text-secondary);
-      font-weight: 600;
+      margin-bottom: 10px;
     }
 
-    /* Typing */
-    .hero-typed-line {
-      font-size: clamp(17px, 2.2vw, 22px);
-      color: var(--text-secondary);
-      margin-bottom: 12px;
-      font-weight: 400;
-    }
-
-    .hero-typed-word {
-      color: var(--purple-300);
+    .hero-typed em {
+      font-style: normal;
+      color: var(--purple-200);
       font-weight: 600;
     }
 
     .hero-typed-cursor {
       color: var(--purple-400);
       animation: blink 0.7s infinite;
+      font-weight: 300;
     }
 
-    /* Hero CTAs */
-    .hero-ctas {
+    .hero-p {
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-bottom: 36px;
+      line-height: 1.8;
+    }
+
+    .hero-p strong { color: var(--text-secondary); font-weight: 600; }
+
+    /* CTAs */
+    .hero-btns {
       display: flex;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 52px;
+      margin-bottom: 44px;
     }
 
-    .btn-aera {
+    .btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 14px 32px;
-      font-size: 14px;
+      gap: 8px;
+      font-size: 13px;
       font-weight: 700;
-      border-radius: var(--radius-full);
+      border-radius: var(--r-full);
       letter-spacing: 0.3px;
-      transition: all 0.3s var(--ease-out);
+      transition: all 0.3s var(--ease);
       position: relative;
       overflow: hidden;
     }
 
-    .btn-aera-primary {
-      background: linear-gradient(135deg, var(--purple-500), var(--purple-600));
+    .btn-main {
+      padding: 13px 30px;
+      background: linear-gradient(135deg, var(--purple-600), var(--purple-500));
       color: white;
-      box-shadow:
-        0 4px 20px var(--purple-dim),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 20px var(--purple-dim), inset 0 1px 0 rgba(255,255,255,0.1);
     }
 
-    .btn-aera-primary::before {
+    .btn-main::after {
       content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.12) 50%, transparent 70%);
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
       transform: translateX(-100%);
-      transition: transform 0.6s;
+      transition: transform 0.5s;
     }
 
-    .btn-aera-primary:hover::before { transform: translateX(100%); }
+    .btn-main:hover::after { transform: translateX(100%); }
+    .btn-main:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(91,33,182,0.35); }
 
-    .btn-aera-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 36px rgba(139, 92, 246, 0.35);
-    }
-
-    .btn-aera-glass {
-      background: rgba(255, 255, 255, 0.04);
+    .btn-glass {
+      padding: 13px 26px;
+      background: rgba(255,255,255,0.03);
       backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
+      border: 1px solid var(--border-2);
       color: var(--text-primary);
-      box-shadow: inset 0 1px 0 var(--glass-shine);
     }
 
-    .btn-aera-glass:hover {
-      background: rgba(139, 92, 246, 0.06);
+    .btn-glass:hover {
+      background: var(--purple-subtle);
       border-color: var(--purple-border);
       transform: translateY(-2px);
     }
 
-    .btn-aera-glass svg { opacity: 0.5; }
+    .btn-glass svg { opacity: 0.4; }
+
+    .btn-sm {
+      padding: 9px 20px;
+      font-size: 12px;
+    }
 
     /* Trust row */
     .hero-trust {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 8px;
       flex-wrap: wrap;
     }
 
-    .hero-trust-pill {
+    .trust-pill {
       display: flex;
       align-items: center;
-      gap: 7px;
-      padding: 6px 14px;
-      background: rgba(255, 255, 255, 0.02);
-      backdrop-filter: blur(8px);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-full);
-      font-size: 11px;
+      gap: 6px;
+      padding: 5px 12px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-1);
+      border-radius: var(--r-full);
+      font-size: 10px;
       color: var(--text-dim);
       font-weight: 500;
     }
 
-    .hero-trust-pill .icon { font-size: 12px; }
+    .trust-pill .ic { font-size: 11px; }
 
-    /* Scroll cue */
-    .scroll-indicator {
+    /* Scroll */
+    .scroll-cue {
       position: absolute;
-      bottom: 24px; left: 50%;
-      transform: translateX(-50%);
+      bottom: 22px; left: 50%; transform: translateX(-50%);
       z-index: 5;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
-    .scroll-indicator-text {
+    .scroll-cue-label {
+      font-family: 'JetBrains Mono', monospace;
       font-size: 8px;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 3px;
       color: var(--text-ghost);
     }
 
-    .scroll-indicator-bar {
-      width: 1px; height: 32px;
+    .scroll-cue-line {
+      width: 1px; height: 28px;
       background: linear-gradient(to bottom, var(--purple-border), transparent);
       animation: scrollDrop 2.5s infinite;
     }
 
     /* ============================================
-       STATS BAR
+       XP PROGRESSION BAR — Key differentiator
        ============================================ */
-    .stats-bar {
-      padding: 32px 0;
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-      background: rgba(10, 10, 16, 0.5);
-      backdrop-filter: blur(12px);
+    .xp-section {
+      padding: 48px 0;
+      border-top: 1px solid var(--border-1);
+      border-bottom: 1px solid var(--border-1);
+      background: var(--black-primary);
+      position: relative;
+      overflow: hidden;
     }
 
-    .stats-row {
+    .xp-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--purple-subtle), var(--gold-subtle), var(--purple-subtle));
+      opacity: 0.5;
+    }
+
+    .xp-inner { position: relative; z-index: 2; }
+
+    .xp-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .xp-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .xp-subtitle {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    .xp-track {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      position: relative;
+    }
+
+    .xp-bar-bg {
+      height: 6px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .xp-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--purple-600), var(--purple-400), var(--gold-400));
+      border-radius: 3px;
+      transition: width 2s var(--ease);
+      box-shadow: 0 0 12px var(--purple-dim);
+      position: relative;
+    }
+
+    .xp-bar-fill::after {
+      content: '';
+      position: absolute;
+      right: 0; top: -3px;
+      width: 12px; height: 12px;
+      background: var(--gold-400);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--gold-dim);
+      border: 2px solid var(--black-primary);
+    }
+
+    .xp-levels {
+      display: flex;
+      justify-content: space-between;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .xp-level {
+      text-align: center;
+      position: relative;
+    }
+
+    .xp-level-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--border-3);
+      margin: 0 auto 6px;
+      transition: all 0.5s;
+      border: 2px solid var(--black-primary);
+    }
+
+    .xp-level.active .xp-level-dot {
+      background: var(--purple-500);
+      box-shadow: 0 0 8px var(--purple-dim);
+    }
+
+    .xp-level.completed .xp-level-dot {
+      background: var(--gold-400);
+      box-shadow: 0 0 8px var(--gold-dim);
+    }
+
+    .xp-level-name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .xp-level.completed .xp-level-name { color: var(--gold-400); }
+    .xp-level.active .xp-level-name { color: var(--purple-300); }
+    .xp-level .xp-level-name { color: var(--text-ghost); }
+
+    .xp-level-xp {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px;
+      color: var(--text-ghost);
+      margin-top: 2px;
+    }
+
+    .xp-stats {
       display: flex;
       justify-content: center;
-      gap: 48px;
+      gap: 40px;
+      margin-top: 24px;
       flex-wrap: wrap;
     }
 
-    .stat-item { text-align: center; }
+    .xp-stat { text-align: center; }
 
-    .stat-number {
+    .xp-stat-val {
       font-family: 'Outfit', sans-serif;
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 800;
-      color: var(--text-white);
+      color: var(--white);
       display: inline;
     }
 
-    .stat-suffix {
+    .xp-stat-suf {
       font-family: 'Outfit', sans-serif;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       color: var(--purple-400);
     }
 
-    .stat-label {
+    .xp-stat-lbl {
       display: block;
-      font-size: 10px;
+      font-size: 9px;
       color: var(--text-dim);
       letter-spacing: 1.5px;
-      margin-top: 4px;
-      font-weight: 600;
       text-transform: uppercase;
+      margin-top: 3px;
+      font-weight: 600;
     }
 
     /* ============================================
-       PRODUCTS / ECOSYSTEM
+       PRODUCTS
        ============================================ */
-    .products-section { padding: var(--section-padding) 0; }
-
-    .products-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    .products-header .section-desc { margin: 0 auto; }
+    .products { padding: var(--section-y) 0; }
+    .products-head { text-align: center; margin-bottom: 52px; }
+    .products-head .subtext { margin: 0 auto; }
 
     .products-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
+      gap: 12px;
     }
 
-    /* Glass product card */
-    .product-card {
+    .p-card {
       position: relative;
-      border-radius: var(--radius-xl);
-      padding: 30px 26px;
-      transition: all 0.4s var(--ease-out);
-      cursor: pointer;
+      border-radius: var(--r-xl);
+      padding: 28px 24px;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
-      background: var(--glass-bg);
-      backdrop-filter: blur(var(--glass-blur)) saturate(1.3);
-      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(1.3);
+      cursor: pointer;
+      transition: all 0.4s var(--ease);
+      background: var(--glass);
+      backdrop-filter: blur(24px) saturate(1.4);
+      -webkit-backdrop-filter: blur(24px) saturate(1.4);
       border: 1px solid var(--glass-border);
-      box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 var(--glass-shine);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.2), inset 0 1px 0 var(--glass-shine);
+      overflow: hidden;
     }
 
-    .product-card::after {
+    .p-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(91,33,182,0.15), transparent);
       opacity: 0;
       transition: opacity 0.4s;
     }
 
-    .product-card:hover {
+    .p-card:hover {
       border-color: var(--glass-border-hover);
-      transform: translateY(-5px);
-      box-shadow:
-        0 24px 64px rgba(0, 0, 0, 0.35),
-        0 0 48px var(--purple-glow),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 56px rgba(0,0,0,0.35), 0 0 40px var(--purple-glow), inset 0 1px 0 var(--glass-shine-hover);
     }
 
-    .product-card:hover::after { opacity: 1; }
+    .p-card:hover::before { opacity: 1; }
 
-    .product-card.span-8 { grid-column: span 8; }
-    .product-card.span-4 { grid-column: span 4; }
+    .p-card.s8 { grid-column: span 8; }
+    .p-card.s4 { grid-column: span 4; }
 
-    /* Featured card layout */
-    .product-card.featured-card {
-      flex-direction: row;
-      padding: 0;
-    }
-
-    .featured-content {
-      padding: 36px 30px;
+    .p-card.feat { flex-direction: row; padding: 0; }
+    .feat-left { padding: 34px 28px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .feat-right {
       flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      background: linear-gradient(135deg, rgba(91,33,182,0.04), transparent);
+      border-left: 1px solid var(--border-1);
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px; min-height: 240px;
     }
 
-    .featured-visual {
-      flex: 1;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.04), rgba(139, 92, 246, 0.01));
-      border-left: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 28px;
-      min-height: 260px;
+    .p-icon {
+      width: 40px; height: 40px;
+      border-radius: var(--r-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; margin-bottom: 16px;
     }
 
-    /* Product card elements */
-    .product-icon {
-      width: 44px; height: 44px;
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      margin-bottom: 18px;
-    }
+    .p-icon.pur { background: linear-gradient(145deg, rgba(91,33,182,0.15), rgba(91,33,182,0.04)); border: 1px solid var(--purple-border); box-shadow: 0 0 12px var(--purple-glow); }
+    .p-icon.gld { background: linear-gradient(145deg, rgba(202,138,4,0.1), rgba(202,138,4,0.03)); border: 1px solid var(--gold-border); box-shadow: 0 0 12px var(--gold-glow); }
+    .p-icon.wht { background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.06); }
+    .p-icon.org { background: linear-gradient(145deg, rgba(234,88,12,0.1), rgba(234,88,12,0.03)); border: 1px solid rgba(234,88,12,0.12); }
+    .p-icon.cyn { background: linear-gradient(145deg, rgba(8,145,178,0.1), rgba(8,145,178,0.03)); border: 1px solid rgba(8,145,178,0.12); }
 
-    .product-icon.purple-bg {
-      background: linear-gradient(145deg, rgba(139, 92, 246, 0.15), rgba(139, 92, 246, 0.05));
-      border: 1px solid var(--purple-border);
-      box-shadow: 0 0 16px var(--purple-glow);
-    }
-
-    .product-icon.gold-bg {
-      background: linear-gradient(145deg, rgba(212, 160, 32, 0.12), rgba(212, 160, 32, 0.04));
-      border: 1px solid var(--gold-border);
-      box-shadow: 0 0 16px var(--gold-glow);
-    }
-
-    .product-icon.white-bg {
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .product-icon.orange-bg {
-      background: linear-gradient(145deg, rgba(245, 158, 11, 0.12), rgba(245, 158, 11, 0.04));
-      border: 1px solid rgba(245, 158, 11, 0.15);
-    }
-
-    .product-icon.cyan-bg {
-      background: linear-gradient(145deg, rgba(6, 182, 212, 0.12), rgba(6, 182, 212, 0.04));
-      border: 1px solid rgba(6, 182, 212, 0.15);
-    }
-
-    .product-status {
+    .p-tag {
       display: inline-flex;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 9px;
-      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px; font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 10px;
-      width: fit-content;
+      margin-bottom: 8px; width: fit-content;
     }
 
-    .product-status.live { background: var(--green-dim); color: var(--green); border: 1px solid rgba(34, 197, 94, 0.12); }
-    .product-status.soon { background: var(--purple-subtle); color: var(--purple-300); border: 1px solid rgba(139, 92, 246, 0.12); }
+    .p-tag.live { background: var(--green-dim); color: var(--green); border: 1px solid rgba(22,163,74,0.1); }
+    .p-tag.soon { background: var(--purple-subtle); color: var(--purple-200); border: 1px solid rgba(91,33,182,0.1); }
 
-    .product-name {
-      font-family: 'Outfit', sans-serif;
-      font-size: 19px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--text-white);
-    }
+    .p-name { font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 6px; color: var(--white); }
+    .p-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px; flex-grow: 1; }
 
-    .product-text {
-      font-size: 13px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 16px;
-      flex-grow: 1;
-    }
-
-    .product-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-
-    .product-chips span {
-      padding: 3px 9px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-subtle);
-      border-radius: 4px;
-      font-size: 10px;
-      color: var(--text-dim);
-      font-weight: 500;
-      backdrop-filter: blur(4px);
-    }
-
-    .product-link-arrow {
-      position: absolute;
-      top: 26px; right: 22px;
-      font-size: 15px;
-      color: var(--text-ghost);
-      transition: all 0.3s var(--ease-out);
-    }
-
-    .product-card:hover .product-link-arrow {
-      color: var(--purple-400);
-      transform: translate(3px, -3px);
-    }
-
-    /* Mini DAW inside featured card */
-    .daw-preview {
-      width: 100%;
-      max-width: 300px;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      background: var(--bg-void);
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
-    }
-
-    .daw-bar {
-      height: 26px;
-      background: rgba(18, 18, 28, 0.9);
-      border-bottom: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      padding: 0 10px;
-      gap: 4px;
-    }
-
-    .daw-dot { width: 6px; height: 6px; border-radius: 50%; }
-
-    .daw-tracks { padding: 6px; display: flex; flex-direction: column; gap: 3px; }
-
-    .daw-track {
-      height: 18px;
+    .p-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+    .p-chips span {
+      padding: 2px 8px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-1);
       border-radius: 3px;
-      opacity: 0.7;
-      position: relative;
-      overflow: hidden;
+      font-size: 9px; color: var(--text-dim); font-weight: 500;
     }
 
-    .daw-track::after {
+    .p-arrow {
+      position: absolute; top: 24px; right: 20px;
+      font-size: 14px; color: var(--text-ghost);
+      transition: all 0.3s var(--ease);
+    }
+
+    .p-card:hover .p-arrow { color: var(--purple-300); transform: translate(2px, -2px); }
+
+    /* Mini DAW */
+    .daw-mini {
+      width: 100%; max-width: 280px;
+      border-radius: var(--r-sm);
+      overflow: hidden;
+      background: var(--black-void);
+      border: 1px solid var(--border-1);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+    }
+
+    .daw-mini-bar {
+      height: 24px; background: rgba(14,14,22,0.9);
+      border-bottom: 1px solid var(--border-1);
+      display: flex; align-items: center; padding: 0 8px; gap: 4px;
+    }
+
+    .daw-mini-dot { width: 5px; height: 5px; border-radius: 50%; }
+    .daw-mini-tracks { padding: 5px; display: flex; flex-direction: column; gap: 3px; }
+
+    .daw-mini-trk {
+      height: 16px; border-radius: 2px; opacity: 0.65;
+      position: relative; overflow: hidden;
+    }
+
+    .daw-mini-trk::after {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
-      animation: trackShimmer 3s infinite;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
+      animation: trackShimmer 3.5s infinite;
     }
 
-    .daw-track:nth-child(1) { background: linear-gradient(90deg, var(--purple-500), rgba(139,92,246,0.15)); width: 85%; }
-    .daw-track:nth-child(2) { background: linear-gradient(90deg, var(--gold), rgba(212,160,32,0.15)); width: 70%; animation-delay: 0.6s; }
-    .daw-track:nth-child(3) { background: linear-gradient(90deg, var(--green), rgba(34,197,94,0.15)); width: 92%; animation-delay: 1.2s; }
-    .daw-track:nth-child(4) { background: linear-gradient(90deg, var(--pink), rgba(236,72,153,0.15)); width: 58%; animation-delay: 1.8s; }
+    .daw-mini-trk:nth-child(1) { background: linear-gradient(90deg, var(--purple-600), rgba(91,33,182,0.12)); width: 87%; }
+    .daw-mini-trk:nth-child(2) { background: linear-gradient(90deg, var(--gold-500), rgba(202,138,4,0.12)); width: 68%; animation-delay: 0.6s; }
+    .daw-mini-trk:nth-child(3) { background: linear-gradient(90deg, var(--green), rgba(22,163,74,0.12)); width: 94%; animation-delay: 1.2s; }
+    .daw-mini-trk:nth-child(4) { background: linear-gradient(90deg, var(--pink), rgba(219,39,119,0.12)); width: 55%; animation-delay: 1.8s; }
 
     /* ============================================
-       WHY AERA
+       WHY / FEATURES
        ============================================ */
-    .why-section {
-      padding: var(--section-padding) 0;
-      border-top: 1px solid var(--border-subtle);
-      position: relative;
-    }
+    .why { padding: var(--section-y) 0; border-top: 1px solid var(--border-1); position: relative; }
+    .why::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 500px; height: 500px; background: radial-gradient(circle, var(--purple-subtle), transparent 55%); pointer-events: none; }
+    .why-head { text-align: center; margin-bottom: 52px; position: relative; z-index: 2; }
+    .why-head .subtext { margin: 0 auto; }
 
-    .why-section::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, var(--purple-subtle), transparent 60%);
-      pointer-events: none;
-    }
-
-    .why-header {
-      text-align: center;
-      margin-bottom: 56px;
-      position: relative; z-index: 2;
-    }
-
-    .why-header .section-desc { margin: 0 auto; }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      position: relative; z-index: 2;
-    }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; position: relative; z-index: 2; }
 
     .why-card {
-      border-radius: var(--radius-xl);
-      padding: 30px 24px;
+      border-radius: var(--r-xl);
+      padding: 28px 22px;
       text-align: center;
-      transition: all 0.35s var(--ease-out);
-      background: var(--glass-bg);
-      backdrop-filter: blur(20px) saturate(1.3);
-      -webkit-backdrop-filter: blur(20px) saturate(1.3);
-      border: 1px solid var(--glass-border);
-      box-shadow: inset 0 1px 0 var(--glass-shine);
-    }
-
-    .why-card:hover {
-      border-color: var(--purple-border);
-      transform: translateY(-4px);
-      box-shadow:
-        0 16px 48px rgba(0, 0, 0, 0.3),
-        0 0 32px var(--purple-glow),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    }
-
-    .why-icon { font-size: 28px; margin-bottom: 16px; display: block; }
-    .why-title { font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--text-white); }
-    .why-text { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
-
-    /* ============================================
-       BEATS
-       ============================================ */
-    .beats-section {
-      padding: var(--section-padding) 0;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .beats-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 44px;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .beats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-
-    .beat-card {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      transition: all 0.35s var(--ease-out);
-      cursor: pointer;
-      background: var(--glass-bg);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--glass-border);
-    }
-
-    .beat-card:hover {
-      border-color: var(--purple-border);
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35), 0 0 24px var(--purple-glow);
-    }
-
-    .beat-visual {
-      aspect-ratio: 1;
-      background: linear-gradient(145deg, var(--bg-secondary), rgba(139, 92, 246, 0.03));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .beat-visual::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: rgba(0, 0, 0, 0.25);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .beat-card:hover .beat-visual::before { opacity: 1; }
-
-    .beat-play {
-      position: absolute;
-      width: 42px; height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--purple-500), var(--purple-600));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transform: scale(0.7);
-      transition: all 0.3s var(--ease-spring);
-      box-shadow: 0 4px 16px var(--purple-dim);
-      z-index: 2;
-    }
-
-    .beat-play svg { color: white; margin-left: 2px; }
-    .beat-card:hover .beat-play { opacity: 1; transform: scale(1); }
-
-    .beat-waves {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      height: 40px;
-    }
-
-    .beat-waves span {
-      width: 3px;
-      border-radius: 2px;
-      background: var(--purple-400);
-      opacity: 0.3;
-    }
-
-    .beat-card:hover .beat-waves span {
-      animation: waveBar 1.2s ease-in-out infinite;
-      opacity: 0.5;
-    }
-
-    .beat-info { padding: 12px 14px; }
-    .beat-name { font-size: 13px; font-weight: 600; margin-bottom: 5px; color: var(--text-white); }
-    .beat-row { display: flex; justify-content: space-between; align-items: center; }
-    .beat-meta { font-size: 10px; color: var(--text-dim); font-weight: 500; }
-    .beat-cost { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; }
-    .beat-cost.free { color: var(--green); }
-    .beat-cost.paid { color: var(--gold); }
-
-    /* ============================================
-       PRICING
-       ============================================ */
-    .pricing-section {
-      padding: var(--section-padding) 0;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .pricing-header {
-      text-align: center;
-      margin-bottom: 52px;
-    }
-
-    .pricing-header .section-desc { margin: 0 auto; }
-
-    .pricing-toggle-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .toggle-label {
-      font-size: 13px;
-      color: var(--text-dim);
-      font-weight: 500;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-
-    .toggle-label.active { color: var(--text-white); }
-
-    .toggle-switch {
-      width: 42px; height: 22px;
-      border-radius: 11px;
-      background: rgba(255, 255, 255, 0.08);
-      position: relative;
-      cursor: pointer;
-      transition: background 0.3s;
-      padding: 0;
-    }
-
-    .toggle-switch.on { background: var(--purple-500); }
-
-    .toggle-switch::after {
-      content: '';
-      position: absolute;
-      top: 3px; left: 3px;
-      width: 16px; height: 16px;
-      border-radius: 50%;
-      background: white;
-      transition: transform 0.3s var(--ease-spring);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    }
-
-    .toggle-switch.on::after { transform: translateX(20px); }
-
-    .save-pill {
-      font-size: 9px;
-      font-weight: 800;
-      color: var(--green);
-      background: var(--green-dim);
-      padding: 2px 8px;
-      border-radius: var(--radius-full);
-      letter-spacing: 1px;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      max-width: 920px;
-      margin: 0 auto;
-    }
-
-    .pricing-card {
-      border-radius: var(--radius-xl);
-      padding: 34px 26px;
-      position: relative;
-      transition: all 0.35s var(--ease-out);
-      background: var(--glass-bg);
-      backdrop-filter: blur(var(--glass-blur)) saturate(1.3);
-      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(1.3);
-      border: 1px solid var(--glass-border);
-      box-shadow: inset 0 1px 0 var(--glass-shine);
-    }
-
-    .pricing-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    }
-
-    .pricing-card.highlight {
-      border-color: var(--purple-border);
-      background: linear-gradient(180deg, rgba(139, 92, 246, 0.06), var(--glass-bg) 50%);
-      box-shadow:
-        0 0 60px var(--purple-glow),
-        0 12px 40px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(139, 92, 246, 0.15);
-    }
-
-    .pricing-card.highlight::before {
-      content: 'BEST VALUE';
-      position: absolute;
-      top: -10px; left: 50%;
-      transform: translateX(-50%);
-      padding: 4px 14px;
-      background: linear-gradient(135deg, var(--purple-500), var(--purple-400));
-      color: white;
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      border-radius: var(--radius-full);
-      box-shadow: 0 2px 12px var(--purple-dim);
-    }
-
-    .pricing-rank {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 4px;
-    }
-
-    .pricing-card.highlight .pricing-rank { color: var(--purple-300); }
-
-    .pricing-name {
-      font-family: 'Outfit', sans-serif;
-      font-size: 21px;
-      font-weight: 800;
-      margin-bottom: 4px;
-      color: var(--text-white);
-    }
-
-    .pricing-price {
-      font-family: 'Outfit', sans-serif;
-      font-size: 42px;
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 2px;
-      color: var(--text-white);
-    }
-
-    .pricing-price .sym { font-size: 20px; vertical-align: super; color: var(--text-secondary); }
-    .pricing-price .per { font-size: 14px; font-weight: 400; color: var(--text-dim); }
-    .pricing-info { font-size: 11px; color: var(--text-dim); margin-bottom: 24px; }
-
-    .pricing-list {
-      list-style: none;
-      margin-bottom: 26px;
-    }
-
-    .pricing-list li {
-      padding: 8px 0;
-      font-size: 13px;
-      color: var(--text-secondary);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .pricing-list li:last-child { border-bottom: none; }
-    .pricing-list .ck { color: var(--purple-400); font-weight: 800; font-size: 11px; flex-shrink: 0; }
-    .pricing-card.highlight .pricing-list .ck { color: var(--purple-300); }
-
-    .pricing-btn {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      text-align: center;
-      border-radius: var(--radius-full);
-      font-size: 13px;
-      font-weight: 700;
-      transition: all 0.3s var(--ease-out);
-      letter-spacing: 0.3px;
-    }
-
-    .pricing-btn.filled {
-      background: linear-gradient(135deg, var(--purple-500), var(--purple-600));
-      color: white;
-      border: none;
-      box-shadow: 0 4px 16px var(--purple-dim);
-    }
-
-    .pricing-btn.filled:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(139, 92, 246, 0.35);
-    }
-
-    .pricing-btn.bordered {
-      background: transparent;
-      color: var(--text-primary);
-      border: 1px solid var(--glass-border);
-    }
-
-    .pricing-btn.bordered:hover {
-      border-color: var(--purple-border);
-      background: var(--purple-subtle);
-    }
-
-    /* ============================================
-       TESTIMONIALS
-       ============================================ */
-    .testimonials-section {
-      padding: var(--section-padding) 0;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .testimonials-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .testimonial {
-      border-radius: var(--radius-xl);
-      padding: 26px 22px;
-      transition: all 0.35s var(--ease-out);
-      background: var(--glass-bg);
+      transition: all 0.35s var(--ease);
+      background: var(--glass);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--glass-border);
       box-shadow: inset 0 1px 0 var(--glass-shine);
     }
 
-    .testimonial:hover {
+    .why-card:hover { border-color: var(--purple-border); transform: translateY(-3px); box-shadow: 0 14px 44px rgba(0,0,0,0.3), 0 0 28px var(--purple-glow); }
+    .why-ic { font-size: 26px; margin-bottom: 14px; display: block; }
+    .why-t { font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--white); }
+    .why-d { font-size: 12px; color: var(--text-secondary); line-height: 1.7; }
+
+    /* ============================================
+       BEATS
+       ============================================ */
+    .beats { padding: var(--section-y) 0; border-top: 1px solid var(--border-1); }
+    .beats-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 16px; }
+    .beats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+
+    .b-card {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      transition: all 0.35s var(--ease);
+      cursor: pointer;
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+    }
+
+    .b-card:hover { border-color: var(--purple-border); transform: translateY(-3px); box-shadow: 0 14px 44px rgba(0,0,0,0.35), 0 0 20px var(--purple-glow); }
+
+    .b-art {
+      aspect-ratio: 1;
+      background: linear-gradient(145deg, var(--black-surface), rgba(91,33,182,0.03));
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+
+    .b-art::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.2); opacity: 0; transition: opacity 0.3s; }
+    .b-card:hover .b-art::before { opacity: 1; }
+
+    .b-play {
+      position: absolute; width: 38px; height: 38px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple-600), var(--purple-500));
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transform: scale(0.7);
+      transition: all 0.3s var(--spring);
+      box-shadow: 0 4px 14px var(--purple-dim); z-index: 2;
+    }
+
+    .b-play svg { color: white; margin-left: 1px; }
+    .b-card:hover .b-play { opacity: 1; transform: scale(1); }
+
+    .b-waves { display: flex; align-items: center; gap: 2px; height: 36px; }
+    .b-waves span { width: 2.5px; border-radius: 2px; background: var(--purple-400); opacity: 0.25; }
+    .b-card:hover .b-waves span { animation: waveBar 1.2s ease-in-out infinite; opacity: 0.45; }
+
+    .b-info { padding: 10px 12px; }
+    .b-title { font-size: 12px; font-weight: 600; margin-bottom: 4px; color: var(--white); }
+    .b-row { display: flex; justify-content: space-between; align-items: center; }
+    .b-meta { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-dim); }
+    .b-price { font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700; }
+    .b-price.free { color: var(--green); }
+    .b-price.paid { color: var(--gold-400); }
+
+    /* ============================================
+       PRICING
+       ============================================ */
+    .pricing { padding: var(--section-y) 0; border-top: 1px solid var(--border-1); }
+    .pricing-head { text-align: center; margin-bottom: 48px; }
+    .pricing-head .subtext { margin: 0 auto; }
+
+    .pricing-toggle {
+      display: flex; justify-content: center; align-items: center;
+      gap: 10px; margin-top: 20px;
+    }
+
+    .tgl-label { font-size: 12px; color: var(--text-dim); font-weight: 500; cursor: pointer; transition: color 0.2s; }
+    .tgl-label.on { color: var(--white); }
+
+    .tgl-sw {
+      width: 38px; height: 20px; border-radius: 10px;
+      background: rgba(255,255,255,0.06); position: relative;
+      cursor: pointer; transition: background 0.3s; padding: 0;
+    }
+    .tgl-sw.on { background: var(--purple-500); }
+    .tgl-sw::after {
+      content: ''; position: absolute; top: 3px; left: 3px;
+      width: 14px; height: 14px; border-radius: 50%; background: white;
+      transition: transform 0.3s var(--spring); box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .tgl-sw.on::after { transform: translateX(18px); }
+
+    .sav-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px; font-weight: 700; color: var(--green);
+      background: var(--green-dim); padding: 2px 7px;
+      border-radius: var(--r-full); letter-spacing: 1px;
+    }
+
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 880px; margin: 0 auto; }
+
+    .pr-card {
+      border-radius: var(--r-2xl); padding: 32px 24px; position: relative;
+      transition: all 0.35s var(--ease);
+      background: var(--glass); backdrop-filter: blur(24px) saturate(1.3);
+      -webkit-backdrop-filter: blur(24px) saturate(1.3);
+      border: 1px solid var(--glass-border);
+      box-shadow: inset 0 1px 0 var(--glass-shine);
+    }
+
+    .pr-card:hover { transform: translateY(-3px); box-shadow: 0 14px 44px rgba(0,0,0,0.3); }
+
+    .pr-card.hl {
       border-color: var(--purple-border);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 0 0 24px var(--purple-glow);
+      background: linear-gradient(180deg, rgba(91,33,182,0.06), var(--glass) 50%);
+      box-shadow: 0 0 56px var(--purple-glow), 0 10px 36px rgba(0,0,0,0.3), inset 0 1px 0 rgba(91,33,182,0.12);
     }
 
-    .testimonial-stars { font-size: 13px; color: var(--gold); letter-spacing: 2px; margin-bottom: 14px; }
-
-    .testimonial-quote {
-      font-size: 13px;
-      color: var(--text-secondary);
-      line-height: 1.75;
-      margin-bottom: 18px;
-      font-style: italic;
+    .pr-card.hl::before {
+      content: 'BEST VALUE'; position: absolute; top: -9px; left: 50%; transform: translateX(-50%);
+      padding: 3px 12px; background: linear-gradient(135deg, var(--purple-600), var(--purple-400));
+      color: white; font-family: 'JetBrains Mono', monospace;
+      font-size: 8px; font-weight: 700; letter-spacing: 1.5px;
+      border-radius: var(--r-full); box-shadow: 0 2px 10px var(--purple-dim);
     }
 
-    .testimonial-who {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .pr-era { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 3px; }
+    .pr-card.hl .pr-era { color: var(--purple-200); }
+    .pr-name { font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 3px; color: var(--white); }
+    .pr-amt { font-family: 'Outfit', sans-serif; font-size: 40px; font-weight: 900; line-height: 1; color: var(--white); margin-bottom: 2px; }
+    .pr-amt .s { font-size: 18px; vertical-align: super; color: var(--text-secondary); }
+    .pr-amt .m { font-size: 13px; font-weight: 400; color: var(--text-dim); }
+    .pr-note { font-size: 10px; color: var(--text-dim); margin-bottom: 22px; }
+
+    .pr-list { list-style: none; margin-bottom: 24px; }
+    .pr-list li { padding: 7px 0; font-size: 12px; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--border-1); }
+    .pr-list li:last-child { border-bottom: none; }
+    .pr-list .c { color: var(--purple-400); font-weight: 800; font-size: 10px; flex-shrink: 0; }
+    .pr-card.hl .pr-list .c { color: var(--purple-200); }
+
+    .pr-btn {
+      display: block; width: 100%; padding: 11px;
+      text-align: center; border-radius: var(--r-full);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.3px;
+      transition: all 0.3s var(--ease);
     }
 
-    .testimonial-avatar {
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      background: var(--purple-subtle);
-      border: 1px solid var(--purple-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
+    .pr-btn.fill {
+      background: linear-gradient(135deg, var(--purple-600), var(--purple-500));
+      color: white; border: none; box-shadow: 0 4px 14px var(--purple-dim);
+    }
+    .pr-btn.fill:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(91,33,182,0.35); }
+    .pr-btn.out { background: transparent; color: var(--text-primary); border: 1px solid var(--glass-border); }
+    .pr-btn.out:hover { border-color: var(--purple-border); background: var(--purple-subtle); }
+
+    /* ============================================
+       TESTIMONIALS
+       ============================================ */
+    .voices { padding: var(--section-y) 0; border-top: 1px solid var(--border-1); }
+    .voices-head { text-align: center; margin-bottom: 44px; }
+    .voices-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+    .voice {
+      border-radius: var(--r-xl); padding: 24px 20px;
+      transition: all 0.35s var(--ease);
+      background: var(--glass); backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      box-shadow: inset 0 1px 0 var(--glass-shine);
     }
 
-    .testimonial-author { font-size: 12px; font-weight: 700; color: var(--text-white); }
-    .testimonial-genre { font-size: 10px; color: var(--text-dim); margin-top: 1px; }
+    .voice:hover { border-color: var(--purple-border); transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.25), 0 0 20px var(--purple-glow); }
+    .voice-stars { font-size: 12px; color: var(--gold-400); letter-spacing: 2px; margin-bottom: 12px; }
+    .voice-q { font-size: 12px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px; font-style: italic; }
+    .voice-who { display: flex; align-items: center; gap: 10px; }
+    .voice-av { width: 32px; height: 32px; border-radius: 50%; background: var(--purple-subtle); border: 1px solid var(--purple-border); display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .voice-name { font-size: 11px; font-weight: 700; color: var(--white); }
+    .voice-role { font-size: 9px; color: var(--text-dim); margin-top: 1px; }
 
     /* ============================================
        CTA
        ============================================ */
-    .cta-section {
-      padding: var(--section-padding) 0;
-      border-top: 1px solid var(--border-subtle);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-section::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 700px; height: 500px;
-      background: radial-gradient(ellipse, rgba(139, 92, 246, 0.06), transparent 60%);
-      pointer-events: none;
-    }
-
-    .cta-inner { position: relative; z-index: 2; }
-
-    .cta-heading {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(36px, 6vw, 64px);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -2px;
-      margin-bottom: 16px;
-    }
-
-    .cta-sub {
-      font-size: 16px;
-      color: var(--text-secondary);
-      margin-bottom: 36px;
-      max-width: 460px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.75;
-    }
-
-    .cta-btns {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    .cta { padding: var(--section-y) 0; border-top: 1px solid var(--border-1); text-align: center; position: relative; overflow: hidden; }
+    .cta::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 400px; background: radial-gradient(ellipse, rgba(91,33,182,0.06), transparent 55%); pointer-events: none; }
+    .cta-in { position: relative; z-index: 2; }
+    .cta-h { font-family: 'Outfit', sans-serif; font-size: clamp(34px, 5.5vw, 60px); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 14px; color: var(--white); }
+    .cta-p { font-size: 15px; color: var(--text-secondary); margin-bottom: 32px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+    .cta-btns { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
 
     /* ============================================
        FOOTER
        ============================================ */
-    .site-footer {
-      border-top: 1px solid var(--border-subtle);
-      padding: 56px 0 32px;
-      background: rgba(9, 9, 15, 0.6);
-      backdrop-filter: blur(8px);
-    }
-
-    .footer-top {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 44px;
-      margin-bottom: 44px;
-    }
-
-    .footer-brand-text {
-      font-size: 13px;
-      color: var(--text-dim);
-      line-height: 1.7;
-      max-width: 250px;
-      margin-top: 10px;
-    }
-
-    .footer-social-row {
-      display: flex;
-      gap: 6px;
-      margin-top: 18px;
-    }
-
-    .footer-social {
-      width: 32px; height: 32px;
-      border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      transition: all 0.2s;
-    }
-
-    .footer-social:hover {
-      border-color: var(--purple-border);
-      background: var(--purple-subtle);
-      transform: translateY(-2px);
-    }
-
-    .footer-col h4 {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-    }
-
-    .footer-col ul { list-style: none; }
-    .footer-col li { margin-bottom: 8px; }
-
-    .footer-col a {
-      font-size: 12px;
-      color: var(--text-dim);
-      transition: color 0.2s;
-    }
-
-    .footer-col a:hover { color: var(--purple-300); }
-
-    .footer-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 24px;
-      border-top: 1px solid var(--border-subtle);
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .footer-bar p { font-size: 10px; color: var(--text-ghost); }
-    .footer-bar a { color: var(--text-dim); transition: color 0.2s; }
-    .footer-bar a:hover { color: var(--purple-300); }
+    .ft { border-top: 1px solid var(--border-1); padding: 52px 0 28px; background: var(--black-void); }
+    .ft-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .ft-brand-p { font-size: 12px; color: var(--text-dim); line-height: 1.7; max-width: 230px; margin-top: 8px; }
+    .ft-socials { display: flex; gap: 5px; margin-top: 16px; }
+    .ft-soc { width: 30px; height: 30px; border-radius: var(--r-sm); background: rgba(255,255,255,0.02); border: 1px solid var(--border-1); display: flex; align-items: center; justify-content: center; font-size: 12px; transition: all 0.2s; }
+    .ft-soc:hover { border-color: var(--purple-border); background: var(--purple-subtle); transform: translateY(-1px); }
+    .ft-col h4 { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 14px; }
+    .ft-col ul { list-style: none; }
+    .ft-col li { margin-bottom: 7px; }
+    .ft-col a { font-size: 11px; color: var(--text-dim); transition: color 0.2s; }
+    .ft-col a:hover { color: var(--purple-200); }
+    .ft-bar { display: flex; justify-content: space-between; align-items: center; padding-top: 22px; border-top: 1px solid var(--border-1); flex-wrap: wrap; gap: 10px; }
+    .ft-bar p { font-size: 9px; color: var(--text-ghost); }
+    .ft-bar a { color: var(--text-dim); transition: color 0.2s; }
+    .ft-bar a:hover { color: var(--purple-200); }
 
     /* ============================================
        ANIMATIONS
        ============================================ */
-    @keyframes shimmerText {
-      0% { background-position: -200% center; }
-      100% { background-position: 200% center; }
-    }
-    @keyframes glowPulse {
-      0%, 100% { opacity: 0.5; transform: translate(-50%, 0) scale(1); }
-      50% { opacity: 0.8; transform: translate(-50%, 0) scale(1.08); }
-    }
-    @keyframes floatSlow {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      25% { transform: translate(15px, -20px) rotate(2deg); }
-      50% { transform: translate(-10px, -10px) rotate(-1deg); }
-      75% { transform: translate(20px, 10px) rotate(1deg); }
-    }
+    @keyframes shimmer { 0% { background-position: -250% center; } 100% { background-position: 250% center; } }
+    @keyframes glowPulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.85; } }
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-    @keyframes scrollDrop {
-      0% { opacity: 0; clip-path: inset(0 0 100% 0); }
-      40% { opacity: 1; clip-path: inset(0 0 0 0); }
-      100% { opacity: 0; clip-path: inset(100% 0 0 0); }
-    }
+    @keyframes scrollDrop { 0% { opacity: 0; clip-path: inset(0 0 100% 0); } 40% { opacity: 1; clip-path: inset(0 0 0 0); } 100% { opacity: 0; clip-path: inset(100% 0 0 0); } }
     @keyframes waveBar { 0%, 100% { height: 18%; } 50% { height: 85%; } }
     @keyframes trackShimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(200%); } }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes xpFill { from { width: 0; } to { width: var(--xp-pct); } }
 
-    .anim-in { opacity: 0; transform: translateY(28px); animation: fadeUp 0.8s var(--ease-out) forwards; }
-    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s var(--ease-out); }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .ain { opacity: 0; transform: translateY(24px); animation: fadeUp 0.75s var(--ease) forwards; }
+    .rv { opacity: 0; transform: translateY(28px); transition: all 0.65s var(--ease); }
+    .rv.vis { opacity: 1; transform: translateY(0); }
 
     /* ============================================
        RESPONSIVE
        ============================================ */
     @media (max-width: 1024px) {
       .products-grid { grid-template-columns: 1fr; }
-      .product-card.span-8, .product-card.span-4 { grid-column: span 1; }
-      .product-card.featured-card { flex-direction: column; }
-      .featured-visual { border-left: none; border-top: 1px solid var(--border-subtle); min-height: 180px; }
+      .p-card.s8, .p-card.s4 { grid-column: span 1; }
+      .p-card.feat { flex-direction: column; }
+      .feat-right { border-left: none; border-top: 1px solid var(--border-1); min-height: 160px; }
     }
     @media (max-width: 968px) {
-      :root { --section-padding: 80px; }
+      :root { --section-y: 80px; }
       .why-grid { grid-template-columns: repeat(2, 1fr); }
       .beats-grid { grid-template-columns: repeat(2, 1fr); }
-      .pricing-grid { grid-template-columns: 1fr; max-width: 370px; }
-      .pricing-card.highlight { order: -1; }
-      .testimonials-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
-      .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 360px; }
+      .pr-card.hl { order: -1; }
+      .voices-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+      .ft-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .xp-levels { gap: 4px; }
     }
     @media (max-width: 640px) {
-      :root { --section-padding: 60px; }
+      :root { --section-y: 56px; }
       nav { top: 8px; width: calc(100% - 16px); }
-      .nav-center { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(6,6,10,0.97); backdrop-filter: blur(24px); flex-direction: column; align-items: center; justify-content: center; gap: 6px; z-index: 5; }
-      .nav-center.open { display: flex; }
-      .nav-center a { font-size: 18px; padding: 10px 24px; }
-      .nav-right { display: none; }
-      .mobile-toggle { display: block; }
-      .hero-ctas { flex-direction: column; max-width: 320px; margin-left: auto; margin-right: auto; }
-      .hero-ctas .btn-aera { width: 100%; justify-content: center; }
-      .hero-trust { flex-direction: column; gap: 8px; }
+      .nav-links { display: none; position: fixed; inset: 0; background: rgba(2,2,4,0.97); backdrop-filter: blur(24px); flex-direction: column; align-items: center; justify-content: center; gap: 4px; z-index: 5; }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 16px; padding: 10px 20px; color: var(--text-secondary); }
+      .nav-actions { display: none; }
+      .mobile-btn { display: block; }
+      .hero-btns { flex-direction: column; max-width: 300px; margin-left: auto; margin-right: auto; }
+      .hero-btns .btn { width: 100%; justify-content: center; }
+      .hero-trust { flex-direction: column; gap: 6px; }
       .why-grid { grid-template-columns: 1fr; }
       .beats-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
-      .beats-header { flex-direction: column; align-items: flex-start; }
-      .footer-top { grid-template-columns: 1fr; gap: 20px; }
-      .footer-bar { flex-direction: column; text-align: center; }
-      .cta-btns { flex-direction: column; max-width: 280px; margin-left: auto; margin-right: auto; }
-      .cta-btns .btn-aera { width: 100%; justify-content: center; }
+      .beats-head { flex-direction: column; align-items: flex-start; }
+      .ft-grid { grid-template-columns: 1fr; gap: 18px; }
+      .ft-bar { flex-direction: column; text-align: center; }
+      .cta-btns { flex-direction: column; max-width: 260px; margin-left: auto; margin-right: auto; }
+      .cta-btns .btn { width: 100%; justify-content: center; }
+      .xp-stats { gap: 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ======== NAVIGATION ======== -->
-  <nav id="mainNav">
-    <div class="nav-bar">
-      <a href="#" class="nav-logo">
-        <div class="nav-logo-icon">A</div>
-        <span class="nav-logo-name">AERA</span>
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-pill">
+      <a href="#" class="nav-brand">
+        <div class="nav-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M12 3L20 21L12 17L4 21Z" fill="rgba(255,255,255,0.1)"/><path d="M12 3L20 21L12 17L4 21Z"/></svg>
+        </div>
+        <span class="nav-wordmark">AERA<span>LABS</span></span>
       </a>
-      <ul class="nav-center" id="navCenter">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#products">Ecosystem</a></li>
         <li><a href="#beats">Beats</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#community">Community</a></li>
       </ul>
-      <div class="nav-right">
-        <a href="#" class="nav-sign-in">Sign In</a>
-        <a href="#" class="nav-cta-btn">Enter Your Era</a>
+      <div class="nav-actions">
+        <a href="#" class="nav-login">Sign In</a>
+        <a href="#" class="nav-start">Enter Your Era</a>
       </div>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="mobile-btn" id="mobBtn" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <!-- ======== HERO ======== -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-bg">
       <div class="hero-mesh"></div>
       <div class="hero-grid"></div>
-      <div class="hero-glow-1"></div>
-      <div class="hero-glow-2"></div>
-      <div class="hero-glow-3"></div>
-      <div class="hero-float hero-float-1"></div>
-      <div class="hero-float hero-float-2"></div>
-      <div class="hero-float hero-float-3"></div>
-      <div class="hero-float hero-float-4"></div>
+      <div class="hero-glow a"></div>
+      <div class="hero-glow b"></div>
     </div>
-
     <div class="hero-content">
-      <div class="hero-badge anim-in">
-        <span class="hero-badge-dot"></span>
-        <span>FORMERLY RAPPERSTORE</span>
-        <span style="color:rgba(139,92,246,0.25)">·</span>
-        <span>NOW FOR ALL ARTISTS</span>
+      <div class="hero-chip ain"><span class="hero-chip-dot"></span>FORMERLY RAPPERSTORE · NOW FOR ALL ARTISTS</div>
+      <h1 class="hero-h1 ain" style="animation-delay:.1s"><span class="hero-h1-text">AERA LABS</span></h1>
+      <p class="hero-sub ain" style="animation-delay:.18s">ENTER YOUR ERA</p>
+      <p class="hero-typed ain" style="animation-delay:.24s">The creative platform for <em id="typed">independent artists</em><span class="hero-typed-cursor">|</span></p>
+      <p class="hero-p ain" style="animation-delay:.3s">DAW · Beats · AI Lyrics · Cloud Vault · XP Progression<br><strong>Everything you need. Zero installs. One platform.</strong></p>
+      <div class="hero-btns ain" style="animation-delay:.38s">
+        <a href="#" class="btn btn-main">Enter Your Era <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="#products" class="btn btn-glass"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5,3 13,8 5,13"/></svg> Explore Platform</a>
       </div>
-
-      <h1 class="hero-title anim-in" style="animation-delay:0.1s">
-        <span class="hero-title-main">AERA</span>
-      </h1>
-
-      <p class="hero-sub-title anim-in" style="animation-delay:0.18s">YOUR CREATIVE ERA</p>
-
-      <p class="hero-typed-line anim-in" style="animation-delay:0.24s">
-        The all-in-one platform for <span class="hero-typed-word" id="typedWord">independent artists</span><span class="hero-typed-cursor">|</span>
-      </p>
-
-      <p class="hero-desc anim-in" style="animation-delay:0.3s">
-        DAW · Beats · Lyrics · Storage · Community<br>
-        <strong>Everything you need. Zero installs. One platform.</strong>
-      </p>
-
-      <div class="hero-ctas anim-in" style="animation-delay:0.38s">
-        <a href="#" class="btn-aera btn-aera-primary">
-          Enter Your Era
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
-        <a href="#products" class="btn-aera btn-aera-glass">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5,3 13,8 5,13"/></svg>
-          Explore the Platform
-        </a>
-      </div>
-
-      <div class="hero-trust anim-in" style="animation-delay:0.46s">
-        <div class="hero-trust-pill"><span class="icon">🌐</span> Browser-Based</div>
-        <div class="hero-trust-pill"><span class="icon">🔓</span> Free to Start</div>
-        <div class="hero-trust-pill"><span class="icon">🎵</span> All Genres</div>
-        <div class="hero-trust-pill"><span class="icon">✦</span> 5+ Tools</div>
+      <div class="hero-trust ain" style="animation-delay:.46s">
+        <div class="trust-pill"><span class="ic">🌐</span> Browser-Based</div>
+        <div class="trust-pill"><span class="ic">🔓</span> Free to Start</div>
+        <div class="trust-pill"><span class="ic">🎵</span> All Genres</div>
+        <div class="trust-pill"><span class="ic">◆</span> XP Progression</div>
       </div>
     </div>
-
-    <div class="scroll-indicator">
-      <div class="scroll-indicator-text">EXPLORE</div>
-      <div class="scroll-indicator-bar"></div>
-    </div>
+    <div class="scroll-cue"><div class="scroll-cue-label">EXPLORE</div><div class="scroll-cue-line"></div></div>
   </section>
 
-  <!-- ======== STATS ======== -->
-  <section class="stats-bar">
+  <!-- XP PROGRESSION -->
+  <section class="xp-section" id="xp">
     <div class="container">
-      <div class="stats-row">
-        <div class="stat-item">
-          <span class="stat-number" data-target="2600">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Community XP</span>
+      <div class="xp-inner">
+        <div class="xp-header rv">
+          <div class="xp-title">Level Up Your <span class="purple-grad">Creative Career</span></div>
+          <div class="xp-subtitle">Earn XP for every action. Create, collaborate, and climb the ranks.</div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="5">0</span><span class="stat-suffix"></span>
-          <span class="stat-label">Creative Tools</span>
+        <div class="xp-track rv" style="transition-delay:.1s">
+          <div class="xp-bar-bg"><div class="xp-bar-fill" id="xpFill" style="--xp-pct:45%"></div></div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="1000">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Beats & Sounds</span>
+        <div class="xp-levels rv" style="transition-delay:.15s">
+          <div class="xp-level completed"><div class="xp-level-dot"></div><div class="xp-level-name">Newcomer</div><div class="xp-level-xp">0 XP</div></div>
+          <div class="xp-level completed"><div class="xp-level-dot"></div><div class="xp-level-name">Explorer</div><div class="xp-level-xp">500 XP</div></div>
+          <div class="xp-level active"><div class="xp-level-dot"></div><div class="xp-level-name">Creator</div><div class="xp-level-xp">2,000 XP</div></div>
+          <div class="xp-level"><div class="xp-level-dot"></div><div class="xp-level-name">Architect</div><div class="xp-level-xp">5,000 XP</div></div>
+          <div class="xp-level"><div class="xp-level-dot"></div><div class="xp-level-name">Legend</div><div class="xp-level-xp">10,000 XP</div></div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
-          <span class="stat-label">In-Browser</span>
+        <div class="xp-stats rv" style="transition-delay:.2s">
+          <div class="xp-stat"><span class="xp-stat-val" data-t="2610">0</span><span class="xp-stat-suf"> XP</span><span class="xp-stat-lbl">Total Earned</span></div>
+          <div class="xp-stat"><span class="xp-stat-val" data-t="5">0</span><span class="xp-stat-suf"></span><span class="xp-stat-lbl">Tools Used</span></div>
+          <div class="xp-stat"><span class="xp-stat-val" data-t="47">0</span><span class="xp-stat-suf"></span><span class="xp-stat-lbl">Actions Today</span></div>
+          <div class="xp-stat"><span class="xp-stat-val" data-t="100">0</span><span class="xp-stat-suf">%</span><span class="xp-stat-lbl">In-Browser</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======== PRODUCTS ======== -->
-  <section class="products-section" id="products">
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
     <div class="container">
-      <div class="products-header reveal">
-        <div class="section-label purple">Ecosystem</div>
-        <h2 class="section-title">Your Creative <span class="purple-text">Arsenal</span></h2>
-        <p class="section-desc">A connected suite of professional tools. No installs. No friction. Just create — and define your era.</p>
+      <div class="products-head rv">
+        <div class="label purple">Ecosystem</div>
+        <h2 class="heading">Your Creative <span class="purple-grad">Arsenal</span></h2>
+        <p class="subtext">A connected suite of professional tools. No installs. No friction. Just create — and define your era.</p>
       </div>
-
       <div class="products-grid">
-        <!-- WAVR Featured -->
-        <div class="product-card featured-card span-8 reveal">
-          <div class="featured-content">
-            <div class="product-icon purple-bg">🎛️</div>
-            <div class="product-status soon">COMING SOON</div>
-            <div class="product-name">WAVR</div>
-            <div class="product-text">Professional DAW in your browser. Multi-track recording, MIDI production, built-in effects including WAVR Tune pitch correction. Open a tab and start creating.</div>
-            <div class="product-chips">
-              <span>Recording</span><span>Multi-Track</span><span>MIDI</span><span>Auto-Tune</span><span>Effects</span>
+        <div class="p-card feat s8 rv">
+          <div class="feat-left">
+            <div class="p-icon pur">🎛️</div>
+            <div class="p-tag soon">COMING SOON</div>
+            <div class="p-name">WAVR</div>
+            <div class="p-desc">Professional DAW in your browser. Multi-track recording, MIDI, built-in effects including WAVR Tune pitch correction. Zero downloads.</div>
+            <div class="p-chips"><span>Recording</span><span>Multi-Track</span><span>MIDI</span><span>Auto-Tune</span><span>Effects</span></div>
+          </div>
+          <div class="feat-right">
+            <div class="daw-mini">
+              <div class="daw-mini-bar"><div class="daw-mini-dot" style="background:#dc2626"></div><div class="daw-mini-dot" style="background:#ca8a04"></div><div class="daw-mini-dot" style="background:#16a34a"></div></div>
+              <div class="daw-mini-tracks"><div class="daw-mini-trk"></div><div class="daw-mini-trk"></div><div class="daw-mini-trk"></div><div class="daw-mini-trk"></div></div>
             </div>
           </div>
-          <div class="featured-visual">
-            <div class="daw-preview">
-              <div class="daw-bar">
-                <div class="daw-dot" style="background:#ef4444"></div>
-                <div class="daw-dot" style="background:#eab308"></div>
-                <div class="daw-dot" style="background:#22c55e"></div>
-              </div>
-              <div class="daw-tracks">
-                <div class="daw-track"></div>
-                <div class="daw-track"></div>
-                <div class="daw-track"></div>
-                <div class="daw-track"></div>
-              </div>
-            </div>
-          </div>
-          <span class="product-link-arrow">↗</span>
+          <span class="p-arrow">↗</span>
         </div>
-
-        <!-- BEATS -->
-        <div class="product-card span-4 reveal" style="transition-delay:0.1s">
-          <div class="product-icon orange-bg">🎹</div>
-          <span class="product-link-arrow">↗</span>
-          <div class="product-status live">LIVE</div>
-          <div class="product-name">BEATS</div>
-          <div class="product-text">Licensed instrumentals for every genre and mood. Free and premium options from producers worldwide.</div>
-          <div class="product-chips"><span>Marketplace</span><span>Licensed</span><span>All Genres</span></div>
+        <div class="p-card s4 rv" style="transition-delay:.08s">
+          <div class="p-icon org">🎹</div><span class="p-arrow">↗</span>
+          <div class="p-tag live">LIVE</div><div class="p-name">BEATS</div>
+          <div class="p-desc">Licensed instrumentals for every genre. Free and premium options from producers worldwide.</div>
+          <div class="p-chips"><span>Marketplace</span><span>Licensed</span><span>All Genres</span></div>
         </div>
-
-        <!-- LYRIC -->
-        <div class="product-card span-4 reveal" style="transition-delay:0.05s">
-          <div class="product-icon white-bg">✍️</div>
-          <span class="product-link-arrow">↗</span>
-          <div class="product-status live">LIVE</div>
-          <div class="product-name">LYRIC</div>
-          <div class="product-text">AI-powered songwriting notepad. Brainstorm, find rhymes, structure verses, and enhance lyrics intelligently.</div>
-          <div class="product-chips"><span>AI Writing</span><span>Rhyme Engine</span><span>Structure</span></div>
+        <div class="p-card s4 rv" style="transition-delay:.04s">
+          <div class="p-icon wht">✍️</div><span class="p-arrow">↗</span>
+          <div class="p-tag live">LIVE</div><div class="p-name">LYRIC</div>
+          <div class="p-desc">AI-powered songwriting notepad. Brainstorm, rhyme, structure verses, and enhance lyrics intelligently.</div>
+          <div class="p-chips"><span>AI Writing</span><span>Rhyme Engine</span><span>Structure</span></div>
         </div>
-
-        <!-- VAULT -->
-        <div class="product-card span-4 reveal" style="transition-delay:0.1s">
-          <div class="product-icon gold-bg">🔒</div>
-          <span class="product-link-arrow">↗</span>
-          <div class="product-status live">LIVE</div>
-          <div class="product-name">VAULT</div>
-          <div class="product-text">Secure cloud storage for music, stems, sessions, and assets. Protected and accessible from anywhere.</div>
-          <div class="product-chips"><span>Cloud</span><span>Stems</span><span>Sessions</span><span>Encrypted</span></div>
+        <div class="p-card s4 rv" style="transition-delay:.08s">
+          <div class="p-icon gld">🔒</div><span class="p-arrow">↗</span>
+          <div class="p-tag live">LIVE</div><div class="p-name">VAULT</div>
+          <div class="p-desc">Secure cloud storage for music, stems, sessions, and assets. Protected and accessible anywhere.</div>
+          <div class="p-chips"><span>Cloud</span><span>Stems</span><span>Sessions</span><span>Encrypted</span></div>
         </div>
-
-        <!-- COMMUNITY -->
-        <div class="product-card span-4 reveal" style="transition-delay:0.15s">
-          <div class="product-icon cyan-bg">👑</div>
-          <span class="product-link-arrow">↗</span>
-          <div class="product-status live">LIVE</div>
-          <div class="product-name">COMMUNITY</div>
-          <div class="product-text">Connect with artists worldwide. Earn XP, level up, collaborate, and grow. Your network is your net worth.</div>
-          <div class="product-chips"><span>Social</span><span>XP</span><span>Collab</span><span>Levels</span></div>
+        <div class="p-card s4 rv" style="transition-delay:.12s">
+          <div class="p-icon cyn">👑</div><span class="p-arrow">↗</span>
+          <div class="p-tag live">LIVE</div><div class="p-name">COMMUNITY</div>
+          <div class="p-desc">Connect with artists worldwide. Earn XP, level up, collaborate. Your network is your net worth.</div>
+          <div class="p-chips"><span>Social</span><span>XP System</span><span>Collab</span><span>Levels</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======== WHY AERA ======== -->
-  <section class="why-section">
+  <!-- WHY -->
+  <section class="why">
     <div class="container">
-      <div class="why-header reveal">
-        <div class="section-label purple">Why Aera</div>
-        <h2 class="section-title">Define Your <span class="duo-text">Own Era</span></h2>
-        <p class="section-desc">Professional tools shouldn't require a professional budget. We're leveling the playing field for every independent artist.</p>
+      <div class="why-head rv">
+        <div class="label purple">Why Aera Labs</div>
+        <h2 class="heading">Define Your <span class="duo-grad">Own Era</span></h2>
+        <p class="subtext">Professional tools shouldn't require a professional budget. We're building for every independent artist.</p>
       </div>
       <div class="why-grid">
-        <div class="why-card reveal"><span class="why-icon">🌐</span><div class="why-title">100% Browser-Based</div><div class="why-text">No downloads. No installs. Open any device, open a tab, and start creating. It's that simple.</div></div>
-        <div class="why-card reveal" style="transition-delay:0.08s"><span class="why-icon">🎨</span><div class="why-title">Every Genre. Every Artist.</div><div class="why-text">Rap, sing, produce, DJ — Aera tools are genre-agnostic and designed for your unique workflow.</div></div>
-        <div class="why-card reveal" style="transition-delay:0.16s"><span class="why-icon">🚀</span><div class="why-title">Start Free. Scale Up.</div><div class="why-text">Real tools on the free tier — not crippled demos. Upgrade when your art demands it, not when we force you.</div></div>
-        <div class="why-card reveal" style="transition-delay:0.05s"><span class="why-icon">🔗</span><div class="why-title">One Connected Ecosystem</div><div class="why-text">Write in LYRIC. Find a beat. Record in WAVR. Store in VAULT. Everything flows together.</div></div>
-        <div class="why-card reveal" style="transition-delay:0.13s"><span class="why-icon">✦</span><div class="why-title">XP & Progression</div><div class="why-text">Earn experience as you create. Level up from Newcomer to Legend. Your era grows with you.</div></div>
-        <div class="why-card reveal" style="transition-delay:0.21s"><span class="why-icon">🛡️</span><div class="why-title">You Own Your Art</div><div class="why-text">Clear licensing. Secure storage. No hidden terms. Your creations belong to you — period.</div></div>
+        <div class="why-card rv"><span class="why-ic">🌐</span><div class="why-t">100% Browser-Based</div><div class="why-d">No downloads. No installs. Open any device, open a tab, start creating.</div></div>
+        <div class="why-card rv" style="transition-delay:.06s"><span class="why-ic">🎨</span><div class="why-t">Every Genre. Every Artist.</div><div class="why-d">Rap, sing, produce, DJ — Aera tools are genre-agnostic for your unique workflow.</div></div>
+        <div class="why-card rv" style="transition-delay:.12s"><span class="why-ic">🚀</span><div class="why-t">Start Free. Scale Up.</div><div class="why-d">Real tools on the free tier. Upgrade when your art demands it, not when we force you.</div></div>
+        <div class="why-card rv" style="transition-delay:.04s"><span class="why-ic">🔗</span><div class="why-t">One Ecosystem</div><div class="why-d">Write in LYRIC. Find a beat. Record in WAVR. Store in VAULT. Everything connected.</div></div>
+        <div class="why-card rv" style="transition-delay:.1s"><span class="why-ic">◆</span><div class="why-t">XP Progression</div><div class="why-d">Earn XP for every action. Level from Newcomer to Legend. Your era grows with you.</div></div>
+        <div class="why-card rv" style="transition-delay:.16s"><span class="why-ic">🛡️</span><div class="why-t">You Own Your Art</div><div class="why-d">Clear licensing. Secure storage. No hidden terms. Your creations are yours — period.</div></div>
       </div>
     </div>
   </section>
 
-  <!-- ======== BEATS ======== -->
-  <section class="beats-section" id="beats">
+  <!-- BEATS -->
+  <section class="beats" id="beats">
     <div class="container">
-      <div class="beats-header">
-        <div class="reveal">
-          <div class="section-label gold">Marketplace</div>
-          <h2 class="section-title">Fresh from the <span class="gold-text">Vault</span></h2>
-          <p class="section-desc">Licensed instrumentals for every style. New sounds added weekly.</p>
-        </div>
-        <a href="#" class="btn-aera btn-aera-glass reveal" style="flex-shrink:0;padding:10px 22px;font-size:13px;">
-          Browse All
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
+      <div class="beats-head">
+        <div class="rv"><div class="label gold">Marketplace</div><h2 class="heading">Fresh from the <span class="gold-grad">Vault</span></h2><p class="subtext">Licensed instrumentals for every style. New sounds weekly.</p></div>
+        <a href="#" class="btn btn-glass btn-sm rv" style="flex-shrink:0">Browse All <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
       </div>
       <div class="beats-grid">
-        <div class="beat-card reveal">
-          <div class="beat-visual">
-            <div class="beat-play"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><polygon points="5,2 14,8 5,14"/></svg></div>
-            <div class="beat-waves"><span style="height:30%"></span><span style="height:55%"></span><span style="height:40%"></span><span style="height:80%"></span><span style="height:50%"></span><span style="height:65%"></span><span style="height:35%"></span><span style="height:70%"></span><span style="height:45%"></span><span style="height:60%"></span></div>
-          </div>
-          <div class="beat-info"><div class="beat-name">Brick & Echo</div><div class="beat-row"><span class="beat-meta">98 BPM · Eb Min · Trap</span><span class="beat-cost free">FREE</span></div></div>
+        <div class="b-card rv">
+          <div class="b-art"><div class="b-play"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><polygon points="5,2 14,8 5,14"/></svg></div><div class="b-waves"><span style="height:30%"></span><span style="height:55%"></span><span style="height:40%"></span><span style="height:80%"></span><span style="height:50%"></span><span style="height:65%"></span><span style="height:35%"></span><span style="height:70%"></span></div></div>
+          <div class="b-info"><div class="b-title">Brick & Echo</div><div class="b-row"><span class="b-meta">98 · Eb Min · Trap</span><span class="b-price free">FREE</span></div></div>
         </div>
-        <div class="beat-card reveal" style="transition-delay:0.08s">
-          <div class="beat-visual">
-            <div class="beat-play"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><polygon points="5,2 14,8 5,14"/></svg></div>
-            <div class="beat-waves"><span style="height:50%"></span><span style="height:75%"></span><span style="height:35%"></span><span style="height:90%"></span><span style="height:55%"></span><span style="height:40%"></span><span style="height:70%"></span><span style="height:60%"></span><span style="height:85%"></span><span style="height:45%"></span></div>
-          </div>
-          <div class="beat-info"><div class="beat-name">Midnight Run</div><div class="beat-row"><span class="beat-meta">140 BPM · F# Min · Drill</span><span class="beat-cost paid">\$24.99</span></div></div>
+        <div class="b-card rv" style="transition-delay:.06s">
+          <div class="b-art"><div class="b-play"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><polygon points="5,2 14,8 5,14"/></svg></div><div class="b-waves"><span style="height:50%"></span><span style="height:75%"></span><span style="height:35%"></span><span style="height:90%"></span><span style="height:55%"></span><span style="height:40%"></span><span style="height:70%"></span><span style="height:60%"></span></div></div>
+          <div class="b-info"><div class="b-title">Midnight Run</div><div class="b-row"><span class="b-meta">140 · F# Min · Drill</span><span class="b-price paid">\$24.99</span></div></div>
         </div>
-        <div class="beat-card reveal" style="transition-delay:0.16s">
-          <div class="beat-visual">
-            <div class="beat-play"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><polygon points="5,2 14,8 5,14"/></svg></div>
-            <div class="beat-waves"><span style="height:65%"></span><span style="height:40%"></span><span style="height:85%"></span><span style="height:50%"></span><span style="height:70%"></span><span style="height:30%"></span><span style="height:60%"></span><span style="height:90%"></span><span style="height:45%"></span><span style="height:75%"></span></div>
-          </div>
-          <div class="beat-info"><div class="beat-name">Golden Hour</div><div class="beat-row"><span class="beat-meta">120 BPM · C Maj · R&B</span><span class="beat-cost paid">\$19.99</span></div></div>
+        <div class="b-card rv" style="transition-delay:.12s">
+          <div class="b-art"><div class="b-play"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><polygon points="5,2 14,8 5,14"/></svg></div><div class="b-waves"><span style="height:65%"></span><span style="height:40%"></span><span style="height:85%"></span><span style="height:50%"></span><span style="height:70%"></span><span style="height:30%"></span><span style="height:60%"></span><span style="height:90%"></span></div></div>
+          <div class="b-info"><div class="b-title">Golden Hour</div><div class="b-row"><span class="b-meta">120 · C Maj · R&B</span><span class="b-price paid">\$19.99</span></div></div>
         </div>
-        <div class="beat-card reveal" style="transition-delay:0.24s">
-          <div class="beat-visual">
-            <div class="beat-play"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><polygon points="5,2 14,8 5,14"/></svg></div>
-            <div class="beat-waves"><span style="height:45%"></span><span style="height:80%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:35%"></span><span style="height:90%"></span><span style="height:60%"></span><span style="height:40%"></span><span style="height:75%"></span><span style="height:50%"></span></div>
-          </div>
-          <div class="beat-info"><div class="beat-name">Southside Drip</div><div class="beat-row"><span class="beat-meta">155 BPM · D Min · Trap</span><span class="beat-cost free">FREE</span></div></div>
+        <div class="b-card rv" style="transition-delay:.18s">
+          <div class="b-art"><div class="b-play"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><polygon points="5,2 14,8 5,14"/></svg></div><div class="b-waves"><span style="height:45%"></span><span style="height:80%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:35%"></span><span style="height:90%"></span><span style="height:60%"></span><span style="height:40%"></span></div></div>
+          <div class="b-info"><div class="b-title">Southside Drip</div><div class="b-row"><span class="b-meta">155 · D Min · Trap</span><span class="b-price free">FREE</span></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======== PRICING ======== -->
-  <section class="pricing-section" id="pricing">
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
     <div class="container">
-      <div class="pricing-header reveal">
-        <div class="section-label purple">Pricing</div>
-        <h2 class="section-title">Choose Your <span class="purple-text">Era</span></h2>
-        <p class="section-desc">Start free with real tools. Level up when your art demands it.</p>
-        <div class="pricing-toggle-row">
-          <span class="toggle-label active" id="moLabel">Monthly</span>
-          <button class="toggle-switch" id="priceToggle" aria-label="Toggle billing"></button>
-          <span class="toggle-label" id="yrLabel">Yearly</span>
-          <span class="save-pill">SAVE 20%</span>
+      <div class="pricing-head rv">
+        <div class="label purple">Pricing</div>
+        <h2 class="heading">Choose Your <span class="purple-grad">Era</span></h2>
+        <p class="subtext">Start free with real tools. Level up when your art demands it.</p>
+        <div class="pricing-toggle">
+          <span class="tgl-label on" id="moL">Monthly</span>
+          <button class="tgl-sw" id="tgl" aria-label="Toggle billing"></button>
+          <span class="tgl-label" id="yrL">Yearly</span>
+          <span class="sav-badge">SAVE 20%</span>
         </div>
       </div>
       <div class="pricing-grid">
-        <!-- Newcomer -->
-        <div class="pricing-card reveal">
-          <div class="pricing-rank">ERA 1</div>
-          <div class="pricing-name">Newcomer</div>
-          <div class="pricing-price"><span class="sym">$</span>0</div>
-          <div class="pricing-info">Free forever — no card required</div>
-          <ul class="pricing-list">
-            <li><span class="ck">✓</span> LYRIC AI notepad</li>
-            <li><span class="ck">✓</span> Browse & preview beats</li>
-            <li><span class="ck">✓</span> Community access & XP</li>
-            <li><span class="ck">✓</span> 2 free downloads / month</li>
-            <li><span class="ck">✓</span> 500MB Vault storage</li>
+        <div class="pr-card rv">
+          <div class="pr-era">ERA 1</div><div class="pr-name">Newcomer</div>
+          <div class="pr-amt"><span class="s">$</span>0</div>
+          <div class="pr-note">Free forever — no card required</div>
+          <ul class="pr-list">
+            <li><span class="c">✓</span> LYRIC AI notepad</li>
+            <li><span class="c">✓</span> Browse & preview beats</li>
+            <li><span class="c">✓</span> Community & XP system</li>
+            <li><span class="c">✓</span> 2 free downloads / month</li>
+            <li><span class="c">✓</span> 500MB Vault storage</li>
           </ul>
-          <a href="#" class="pricing-btn bordered">Start Free</a>
+          <a href="#" class="pr-btn out">Start Free</a>
         </div>
-        <!-- Creator -->
-        <div class="pricing-card highlight reveal" style="transition-delay:0.08s">
-          <div class="pricing-rank">ERA 2</div>
-          <div class="pricing-name">Creator</div>
-          <div class="pricing-price"><span class="sym">$</span><span class="pv" data-mo="9" data-yr="7">9</span><span class="per">/mo</span></div>
-          <div class="pricing-info"><span class="yn" style="display:none">Billed \$84/year · </span>Cancel anytime</div>
-          <ul class="pricing-list">
-            <li><span class="ck">✓</span> Everything in Newcomer</li>
-            <li><span class="ck">✓</span> Full WAVR DAW access</li>
-            <li><span class="ck">✓</span> WAVR Tune pitch correction</li>
-            <li><span class="ck">✓</span> 10GB Vault storage</li>
-            <li><span class="ck">✓</span> Premium toolkits & presets</li>
-            <li><span class="ck">✓</span> Priority community</li>
+        <div class="pr-card hl rv" style="transition-delay:.06s">
+          <div class="pr-era">ERA 2</div><div class="pr-name">Creator</div>
+          <div class="pr-amt"><span class="s">$</span><span class="pv" data-mo="9" data-yr="7">9</span><span class="m">/mo</span></div>
+          <div class="pr-note"><span class="yn" style="display:none">Billed \$84/year · </span>Cancel anytime</div>
+          <ul class="pr-list">
+            <li><span class="c">✓</span> Everything in Newcomer</li>
+            <li><span class="c">✓</span> Full WAVR DAW access</li>
+            <li><span class="c">✓</span> WAVR Tune pitch correction</li>
+            <li><span class="c">✓</span> 10GB Vault storage</li>
+            <li><span class="c">✓</span> Premium toolkits & presets</li>
+            <li><span class="c">✓</span> 2x XP earning rate</li>
           </ul>
-          <a href="#" class="pricing-btn filled">Enter Your Era</a>
+          <a href="#" class="pr-btn fill">Enter Your Era</a>
         </div>
-        <!-- Legend -->
-        <div class="pricing-card reveal" style="transition-delay:0.16s">
-          <div class="pricing-rank">ERA 3</div>
-          <div class="pricing-name">Legend</div>
-          <div class="pricing-price"><span class="sym">$</span><span class="pv" data-mo="24" data-yr="19">24</span><span class="per">/mo</span></div>
-          <div class="pricing-info"><span class="yn" style="display:none">Billed \$228/year · </span>Cancel anytime</div>
-          <ul class="pricing-list">
-            <li><span class="ck">✓</span> Everything in Creator</li>
-            <li><span class="ck">✓</span> 100GB Vault storage</li>
-            <li><span class="ck">✓</span> Sell beats on marketplace</li>
-            <li><span class="ck">✓</span> Collaboration rooms</li>
-            <li><span class="ck">✓</span> Priority support</li>
-            <li><span class="ck">✓</span> Early access to everything</li>
+        <div class="pr-card rv" style="transition-delay:.12s">
+          <div class="pr-era">ERA 3</div><div class="pr-name">Legend</div>
+          <div class="pr-amt"><span class="s">$</span><span class="pv" data-mo="24" data-yr="19">24</span><span class="m">/mo</span></div>
+          <div class="pr-note"><span class="yn" style="display:none">Billed \$228/year · </span>Cancel anytime</div>
+          <ul class="pr-list">
+            <li><span class="c">✓</span> Everything in Creator</li>
+            <li><span class="c">✓</span> 100GB Vault storage</li>
+            <li><span class="c">✓</span> Sell beats on marketplace</li>
+            <li><span class="c">✓</span> Collaboration rooms</li>
+            <li><span class="c">✓</span> 5x XP earning rate</li>
+            <li><span class="c">✓</span> Early access to everything</li>
           </ul>
-          <a href="#" class="pricing-btn bordered">Go Legend</a>
+          <a href="#" class="pr-btn out">Go Legend</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======== TESTIMONIALS ======== -->
-  <section class="testimonials-section">
+  <!-- TESTIMONIALS -->
+  <section class="voices">
     <div class="container">
-      <div class="testimonials-header reveal">
-        <div class="section-label gold" style="justify-content:center;">Voices</div>
-        <h2 class="section-title">Artists in Their <span class="gold-text">Era</span></h2>
+      <div class="voices-head rv">
+        <div class="label gold" style="justify-content:center;">Voices</div>
+        <h2 class="heading" style="text-align:center">Artists in Their <span class="gold-grad">Era</span></h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial reveal">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-quote">"The rebrand to Aera is perfect — this isn't just for rappers anymore. LYRIC alone changed how I write. This is my era."</p>
-          <div class="testimonial-who"><div class="testimonial-avatar">🎤</div><div><div class="testimonial-author">Independent Vocalist</div><div class="testimonial-genre">R&B / Soul</div></div></div>
+      <div class="voices-grid">
+        <div class="voice rv">
+          <div class="voice-stars">★★★★★</div>
+          <p class="voice-q">"The rebrand to Aera Labs is perfect. This isn't just for rappers anymore. LYRIC changed how I write — and the XP system keeps me coming back daily."</p>
+          <div class="voice-who"><div class="voice-av">🎤</div><div><div class="voice-name">Independent Vocalist</div><div class="voice-role">R&B / Soul</div></div></div>
         </div>
-        <div class="testimonial reveal" style="transition-delay:0.1s">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-quote">"WAVR in a browser is insane. I record demos on my Chromebook at work. No other platform lets me do that. Aera understands."</p>
-          <div class="testimonial-who"><div class="testimonial-avatar">🎧</div><div><div class="testimonial-author">Bedroom Producer</div><div class="testimonial-genre">Hip-Hop / Electronic</div></div></div>
+        <div class="voice rv" style="transition-delay:.08s">
+          <div class="voice-stars">★★★★★</div>
+          <p class="voice-q">"WAVR in a browser is insane. I record demos on my Chromebook at work. The progression system makes me feel like I'm actually building something."</p>
+          <div class="voice-who"><div class="voice-av">🎧</div><div><div class="voice-name">Bedroom Producer</div><div class="voice-role">Hip-Hop / Electronic</div></div></div>
         </div>
-        <div class="testimonial reveal" style="transition-delay:0.2s">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-quote">"Free beats that slap? Vault storage? A community that actually cares? The free tier alone is better than what I was paying for elsewhere."</p>
-          <div class="testimonial-who"><div class="testimonial-avatar">🎵</div><div><div class="testimonial-author">Indie Singer-Songwriter</div><div class="testimonial-genre">Pop / Alternative</div></div></div>
+        <div class="voice rv" style="transition-delay:.16s">
+          <div class="voice-stars">★★★★★</div>
+          <p class="voice-q">"Went from Newcomer to Creator rank in two weeks. The free tier is better than what I was paying for elsewhere. This is my era now."</p>
+          <div class="voice-who"><div class="voice-av">🎵</div><div><div class="voice-name">Indie Singer-Songwriter</div><div class="voice-role">Pop / Alternative</div></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======== CTA ======== -->
-  <section class="cta-section" id="community">
+  <!-- CTA -->
+  <section class="cta" id="community">
     <div class="container">
-      <div class="cta-inner reveal">
-        <div class="section-label purple" style="justify-content:center;">Join the Movement</div>
-        <h2 class="cta-heading">Your Era<br><span class="duo-text">Starts Now.</span></h2>
-        <p class="cta-sub">Join independent artists worldwide who are defining their creative era — no label, no permission, no limits.</p>
+      <div class="cta-in rv">
+        <div class="label purple" style="justify-content:center;">Join the Movement</div>
+        <h2 class="cta-h">Your Era<br><span class="duo-grad">Starts Now.</span></h2>
+        <p class="cta-p">Join independent artists worldwide defining their creative era. No label. No permission. No limits.</p>
         <div class="cta-btns">
-          <a href="#" class="btn-aera btn-aera-primary" style="font-size:16px;padding:16px 40px;">
-            Enter Your Era — Free
-            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </a>
-          <a href="#products" class="btn-aera btn-aera-glass">Explore the Platform</a>
+          <a href="#" class="btn btn-main" style="font-size:15px;padding:15px 36px;">Enter Your Era — Free <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <a href="#products" class="btn btn-glass">Explore Platform</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======== FOOTER ======== -->
-  <footer class="site-footer">
+  <!-- FOOTER -->
+  <footer class="ft">
     <div class="container">
-      <div class="footer-top">
+      <div class="ft-grid">
         <div>
-          <a href="#" class="nav-logo" style="margin-bottom:4px">
-            <div class="nav-logo-icon">A</div>
-            <span class="nav-logo-name">AERA</span>
-          </a>
-          <p class="footer-brand-text">The all-in-one creative platform for independent artists. Define your era.</p>
-          <div class="footer-social-row">
-            <a href="#" class="footer-social">𝕏</a>
-            <a href="#" class="footer-social">📷</a>
-            <a href="#" class="footer-social">▶</a>
-            <a href="#" class="footer-social">💬</a>
-            <a href="#" class="footer-social">♪</a>
-          </div>
+          <a href="#" class="nav-brand" style="margin-bottom:2px"><div class="nav-mark"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M12 3L20 21L12 17L4 21Z" fill="rgba(255,255,255,0.1)"/><path d="M12 3L20 21L12 17L4 21Z"/></svg></div><span class="nav-wordmark">AERA<span>LABS</span></span></a>
+          <p class="ft-brand-p">The creative platform for independent artists. Define your era with professional tools.</p>
+          <div class="ft-socials"><a href="#" class="ft-soc">𝕏</a><a href="#" class="ft-soc">📷</a><a href="#" class="ft-soc">▶</a><a href="#" class="ft-soc">💬</a><a href="#" class="ft-soc">♪</a></div>
         </div>
-        <div class="footer-col">
-          <h4>Platform</h4>
-          <ul>
-            <li><a href="#">WAVR — DAW</a></li>
-            <li><a href="#">LYRIC — Writing</a></li>
-            <li><a href="#">VAULT — Storage</a></li>
-            <li><a href="#">BEATS — Marketplace</a></li>
-            <li><a href="#">Community</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Tutorials</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Changelog</a></li>
-            <li><a href="#">Status</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
+        <div class="ft-col"><h4>Platform</h4><ul><li><a href="#">WAVR — DAW</a></li><li><a href="#">LYRIC — Writing</a></li><li><a href="#">VAULT — Storage</a></li><li><a href="#">BEATS — Marketplace</a></li><li><a href="#">Community</a></li></ul></div>
+        <div class="ft-col"><h4>Resources</h4><ul><li><a href="#">Documentation</a></li><li><a href="#">Tutorials</a></li><li><a href="#">Blog</a></li><li><a href="#">Changelog</a></li><li><a href="#">Status</a></li></ul></div>
+        <div class="ft-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Pricing</a></li><li><a href="#">Terms</a></li><li><a href="#">Privacy</a></li><li><a href="#">Contact</a></li></ul></div>
       </div>
-      <div class="footer-bar">
-        <p>© 2025 Aera. All rights reserved.</p>
-        <p>Formerly Rapperstore · Now for <a href="#" style="color:var(--purple-300)">every artist</a>.</p>
+      <div class="ft-bar">
+        <p>© 2025 Aera Labs. All rights reserved.</p>
+        <p>Formerly Rapperstore · Now for <a href="#" style="color:var(--purple-200)">every artist</a>.</p>
         <p><a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Cookies</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- ============================================
-       JAVASCRIPT
-       ============================================ -->
+  <!-- JAVASCRIPT -->
   <script>
-    // ---- Nav scroll ----
-    const nav = document.getElementById('mainNav');
+    // Nav scroll
+    const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
 
-    // ---- Mobile menu ----
-    const toggle = document.getElementById('mobileToggle');
-    const navCenter = document.getElementById('navCenter');
-    let mOpen = false;
-
-    toggle.addEventListener('click', () => {
-      mOpen = !mOpen;
-      toggle.classList.toggle('open', mOpen);
-      navCenter.classList.toggle('open', mOpen);
-      document.body.style.overflow = mOpen ? 'hidden' : '';
+    // Mobile menu
+    const mobBtn = document.getElementById('mobBtn');
+    const navLinks = document.getElementById('navLinks');
+    let mo = false;
+    mobBtn.addEventListener('click', () => {
+      mo = !mo;
+      mobBtn.classList.toggle('open', mo);
+      navLinks.classList.toggle('open', mo);
+      document.body.style.overflow = mo ? 'hidden' : '';
     });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      if (mo) { mo = false; mobBtn.classList.remove('open'); navLinks.classList.remove('open'); document.body.style.overflow = ''; }
+    }));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && mo) mobBtn.click(); });
 
-    navCenter.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        if (mOpen) { mOpen = false; toggle.classList.remove('open'); navCenter.classList.remove('open'); document.body.style.overflow = ''; }
-      });
-    });
-
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && mOpen) toggle.click(); });
-
-    // ---- Smooth scroll ----
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', function(e) {
         const h = this.getAttribute('href');
@@ -2016,16 +1458,27 @@
       });
     });
 
-    // ---- Scroll reveal ----
-    const rObserver = new IntersectionObserver(entries => {
-      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); rObserver.unobserve(en.target); } });
+    // Scroll reveal
+    const ro = new IntersectionObserver(es => {
+      es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('vis'); ro.unobserve(en.target); } });
     }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.rv').forEach(el => ro.observe(el));
 
-    document.querySelectorAll('.reveal').forEach(el => rObserver.observe(el));
+    // XP bar animation
+    const xpFill = document.getElementById('xpFill');
+    const xpObs = new IntersectionObserver(es => {
+      es.forEach(en => {
+        if (en.isIntersecting) {
+          xpFill.style.width = '45%';
+          xpObs.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    if (xpFill) xpObs.observe(xpFill.parentElement);
 
-    // ---- Stat counters ----
+    // Stat counters
     function countUp(el, target) {
-      const dur = 2200;
+      const dur = 2400;
       const start = performance.now();
       const tick = now => {
         const p = Math.min((now - start) / dur, 1);
@@ -2036,73 +1489,70 @@
     }
 
     let counted = false;
-    const sBar = document.querySelector('.stats-bar');
-    const sObs = new IntersectionObserver(entries => {
-      entries.forEach(en => {
+    const xpS = document.querySelector('.xp-section');
+    const sObs = new IntersectionObserver(es => {
+      es.forEach(en => {
         if (en.isIntersecting && !counted) {
           counted = true;
-          document.querySelectorAll('.stat-number').forEach(el => {
-            const t = parseInt(el.dataset.target);
+          document.querySelectorAll('.xp-stat-val').forEach(el => {
+            const t = parseInt(el.dataset.t);
             if (t) countUp(el, t);
           });
         }
       });
-    }, { threshold: 0.4 });
-    if (sBar) sObs.observe(sBar);
+    }, { threshold: 0.3 });
+    if (xpS) sObs.observe(xpS);
 
-    // ---- Typing effect ----
-    const typedEl = document.getElementById('typedWord');
+    // Typing effect
+    const typedEl = document.getElementById('typed');
     const words = ['independent artists', 'singers & vocalists', 'rappers & MCs', 'producers', 'songwriters', 'bedroom studios', 'DJs & performers', 'every creator'];
-    let wIdx = 0, cIdx = 0, deleting = false, speed = 80;
-
+    let wI = 0, cI = 0, del = false, spd = 80;
     function typeLoop() {
-      const w = words[wIdx];
-      if (deleting) { typedEl.textContent = w.substring(0, --cIdx); speed = 35; }
-      else { typedEl.textContent = w.substring(0, ++cIdx); speed = 80; }
-
-      if (!deleting && cIdx === w.length) { speed = 2400; deleting = true; }
-      else if (deleting && cIdx === 0) { deleting = false; wIdx = (wIdx + 1) % words.length; speed = 350; }
-      setTimeout(typeLoop, speed);
+      const w = words[wI];
+      if (del) { typedEl.textContent = w.substring(0, --cI); spd = 35; }
+      else { typedEl.textContent = w.substring(0, ++cI); spd = 80; }
+      if (!del && cI === w.length) { spd = 2400; del = true; }
+      else if (del && cI === 0) { del = false; wI = (wI + 1) % words.length; spd = 350; }
+      setTimeout(typeLoop, spd);
     }
     setTimeout(typeLoop, 1600);
 
-    // ---- Pricing toggle ----
-    const pToggle = document.getElementById('priceToggle');
-    const moLbl = document.getElementById('moLabel');
-    const yrLbl = document.getElementById('yrLabel');
-    let yearly = false;
-
-    pToggle.addEventListener('click', () => {
-      yearly = !yearly;
-      pToggle.classList.toggle('on', yearly);
-      moLbl.classList.toggle('active', !yearly);
-      yrLbl.classList.toggle('active', yearly);
-      document.querySelectorAll('.pv').forEach(el => el.textContent = yearly ? el.dataset.yr : el.dataset.mo);
-      document.querySelectorAll('.yn').forEach(el => el.style.display = yearly ? 'inline' : 'none');
+    // Pricing toggle
+    const tgl = document.getElementById('tgl');
+    const moL = document.getElementById('moL');
+    const yrL = document.getElementById('yrL');
+    let yr = false;
+    tgl.addEventListener('click', () => {
+      yr = !yr;
+      tgl.classList.toggle('on', yr);
+      moL.classList.toggle('on', !yr);
+      yrL.classList.toggle('on', yr);
+      document.querySelectorAll('.pv').forEach(el => el.textContent = yr ? el.dataset.yr : el.dataset.mo);
+      document.querySelectorAll('.yn').forEach(el => el.style.display = yr ? 'inline' : 'none');
     });
 
-    // ---- Beat hover waveforms ----
-    document.querySelectorAll('.beat-card').forEach(card => {
-      const bars = card.querySelectorAll('.beat-waves span');
+    // Beat hover waveforms
+    document.querySelectorAll('.b-card').forEach(card => {
+      const bars = card.querySelectorAll('.b-waves span');
       bars.forEach((b, i) => { b.style.animationDelay = `${i * 0.07}s`; b.style.animationPlayState = 'paused'; });
       card.addEventListener('mouseenter', () => bars.forEach(b => b.style.animationPlayState = 'running'));
       card.addEventListener('mouseleave', () => bars.forEach(b => b.style.animationPlayState = 'paused'));
     });
 
-    // ---- Parallax hero grid ----
-    const hGrid = document.querySelector('.hero-grid');
+    // Hero parallax
+    const hg = document.querySelector('.hero-grid');
     window.addEventListener('scroll', () => {
-      if (window.scrollY < window.innerHeight && hGrid) {
-        hGrid.style.transform = `translateY(${window.scrollY * 0.2}px)`;
-        hGrid.style.opacity = Math.max(0, 1 - window.scrollY / (window.innerHeight * 0.7));
+      if (window.scrollY < window.innerHeight && hg) {
+        hg.style.transform = `translateY(${window.scrollY * 0.2}px)`;
+        hg.style.opacity = Math.max(0, 1 - window.scrollY / (window.innerHeight * 0.7));
       }
     });
 
-    // ---- Console ----
+    // Console
     console.log(
-      '%c✦ AERA %c Your Creative Era Starts Here ',
-      'background: linear-gradient(135deg, #8b5cf6, #a855f7); color: white; font-size: 16px; font-weight: 900; padding: 8px 14px; border-radius: 6px 0 0 6px; letter-spacing: 3px;',
-      'background: #101018; color: #9090a8; font-size: 12px; padding: 8px 14px; border-radius: 0 6px 6px 0;'
+      '%c◆ AERA LABS %c Enter Your Era ',
+      'background: linear-gradient(135deg, #5b21b6, #6d28d9); color: white; font-size: 14px; font-weight: 900; padding: 8px 12px; border-radius: 6px 0 0 6px; letter-spacing: 2px;',
+      'background: #0a0a10; color: #8888a0; font-size: 11px; padding: 8px 12px; border-radius: 0 6px 6px 0;'
     );
   </script>
 </body>
